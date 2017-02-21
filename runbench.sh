@@ -6,7 +6,7 @@
 
 
 # compile, package, and install this hadoop
-# mvn package install -Pdist -DskipTests
+mvn package install -Pdist -DskipTests
 
 # execute benchmark on hadoop-0.22
 ROOT=`pwd`
