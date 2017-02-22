@@ -239,38 +239,38 @@ public class NNThroughputBenchmark {
           opsPerThread[tIdx] = 0;
         setNameNodeLoggingLevel(Level.WARN);
         generateInputs(opsPerThread);
-	      setNameNodeLoggingLevel(logLevel);
+	setNameNodeLoggingLevel(logLevel);
 
         while (curNumThread <= numThreads) {
-          getNumOpsExecutedcuted = 0;
-          cumulativeTime = 0;
-          
-          try {
-            daemons.clear();
-            for(tIdx=0; tIdx < curNumThread; tIdx++)
-              daemons.add(new StatsDaemon(tIdx, opsPerThread[tIdx], this));
+        numOpsExecuted = 0;
+        cumulativeTime = 0;
+        
+        try {
+          daemons.clear();
+          for(tIdx=0; tIdx < curNumThread; tIdx++)
+            daemons.add(new StatsDaemon(tIdx, opsPerThread[tIdx], this));
 
-            start = System.currentTimeMillis();
-            LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
-            for(nIdx=0; nIdx < curNumThread; nIdx++)
-              daemons.get(nIdx).start();
+          start = System.currentTimeMillis();
+          LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
+          for(nIdx=0; nIdx < curNumThread; nIdx++)
+            daemons.get(nIdx).start();
 
-          } finally {
-            while(isInPorgress()) {
-              // try {Thread.sleep(500);} catch (InterruptedException e) {}
-            }
-            elapsedTime = System.currentTimeMillis() - start;
-            for(nIdx=0; nIdx < curNumThread; nIdx++) {
-              StatsDaemon d = daemons.get(nIdx);
-              incrementStats(d.localNumOpsExecuted, d.localCumulativeTime);
-              // System.out.println(d.toString() + ": ops Exec = " + d.localNumOpsExecuted);
-            }
-            // LOG.info("Daniar : numThreads "+numThreads);
-            LOG.info("--- " + curNumThread + " datanodes  ---");
-            this.printStats();
+        } finally {
+          while(isInPorgress()) {
+            // try {Thread.sleep(500);} catch (InterruptedException e) {}
           }
+          elapsedTime = System.currentTimeMillis() - start;
+          for(nIdx=0; nIdx < curNumThread; nIdx++) {
+            StatsDaemon d = daemons.get(nIdx);
+            incrementStats(d.localNumOpsExecuted, d.localCumulativeTime);
+            // System.out.println(d.toString() + ": ops Exec = " + d.localNumOpsExecuted);
+          }
+            LOG.info("Daniar : numThreads "+numThreads);
+          LOG.info("--- " + curNumThread + " datanodes  ---");
+          this.printStats();
+        }
 
-          curNumThread = curNumThread * 2;
+        curNumThread = curNumThread * 2;
         }
 
       } finally {  
@@ -374,7 +374,7 @@ public class NNThroughputBenchmark {
     }
 
     void printStats() {
-      LOG.info("---:: " + getOpName() + " stats  ---");
+      LOG.info("--- " + getOpName() + " stats  ---");
       LOG.info("# operations: " + getNumOpsExecuted());
       LOG.info("Elapsed Time: " + getElapsedTime());
       LOG.info(" Ops per sec: " + getOpsPerSecond());
