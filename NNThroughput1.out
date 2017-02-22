@@ -1,76 +1,128 @@
-17/02/14 16:49:51 FATAL namenode.NNThroughputBenchmark: Log level = ERROR
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- 1 datanodes  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 10
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 100.0
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 9
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- 2 datanodes  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 5
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 200.0
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 5
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- 4 datanodes  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 6
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 166.66666666666666
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 5
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- 8 datanodes  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 6
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 166.66666666666666
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 6
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- 16 datanodes  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 7
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 142.85714285714286
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 6
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- 32 datanodes  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 7
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 142.85714285714286
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 6
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- 64 datanodes  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 8
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 125.0
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 5
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- 128 datanodes  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 15
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 66.66666666666667
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 2
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- 256 datanodes  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 29
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 34.48275862068966
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 4
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Everything done!
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport inputs ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: reports = 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: datanodes = 256 (969, 1000, 1000, 1000, 982, 1000, 1000, 997, 1000, 1000, 961, 1000, 981, 934, 1000, 1000, 1000, 1000, 996, 954, 1000, 999, 1000, 970, 1000, 1000, 1000, 949, 1000, 996, 1000, 989, 955, 1000, 994, 969, 1000, 971, 1000, 986, 964, 1000, 941, 1000, 998, 1000, 939, 1000, 986, 1000, 1000, 1000, 1000, 1000, 960, 982, 979, 1000, 1000, 988, 1000, 948, 1000, 923, 962, 1000, 1000, 1000, 1000, 1000, 980, 1000, 975, 1000, 1000, 991, 979, 1000, 990, 985, 988, 1000, 1000, 964, 1000, 1000, 997, 973, 1000, 1000, 999, 970, 976, 1000, 995, 993, 973, 995, 989, 1000, 1000, 1000, 999, 1000, 999, 949, 940, 943, 1000, 1000, 1000, 983, 950, 982, 1000, 1000, 1000, 993, 1000, 1000, 980, 1000, 923, 958, 1000, 1000, 1000, 1000, 1000, 999, 994, 1000, 992, 990, 1000, 989, 1000, 998, 959, 1000, 972, 964, 1000, 950, 980, 1000, 995, 1000, 979, 970, 976, 1000, 944, 988, 1000, 1000, 1000, 1000, 971, 1000, 1000, 992, 946, 986, 1000, 963, 996, 1000, 953, 1000, 1000, 981, 966, 965, 1000, 992, 974, 1000, 1000, 941, 1000, 1000, 987, 1000, 978, 953, 1000, 998, 1000, 999, 1000, 993, 1000, 1000, 988, 1000, 1000, 973, 1000, 1000, 981, 1000, 964, 996, 988, 975, 1000, 979, 992, 1000, 1000, 958, 1000, 981, 974, 946, 1000, 1000, 989, 1000, 1000, 1000, 990, 988, 975, 1000, 992, 1000, 1000, 996, 940, 930, 1000, 1000, 1000, 994, 956, 1000, 961, 990, 923, 1000, 998, 973, 1000, 994, 1000, 933, 1000, 992, 1000, 945, 983, 1000, 1000, 1000)
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: blocksPerReport = 1000
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: # operations: 1
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Elapsed Time: 29
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark:  Ops per sec: 34.48275862068966
-17/02/14 16:49:51 INFO namenode.NNThroughputBenchmark: Average Time: 4
+FATAL namenode.NNThroughputBenchmark: Log level = ERROR
+
+ --- 1 datanodes  ---
+ Elapsed Time: 10
+  Ops per sec: 100.0
+ Average Time: 9
+
+ --- 2 datanodes  ---
+ Elapsed Time: 5
+  Ops per sec: 200.0
+ Average Time: 5
+
+ --- 4 datanodes  ---
+ Elapsed Time: 6
+  Ops per sec: 166.66666666666666
+ Average Time: 5
+
+ --- 8 datanodes  ---
+ Elapsed Time: 6
+  Ops per sec: 166.66666666666666
+ Average Time: 6
+
+ --- 16 datanodes  ---
+ Elapsed Time: 7
+  Ops per sec: 142.85714285714286
+ Average Time: 6
+
+ --- 32 datanodes  ---
+ Elapsed Time: 7
+  Ops per sec: 142.85714285714286
+ Average Time: 6
+
+ --- 64 datanodes  ---
+ Elapsed Time: 8
+  Ops per sec: 125.0
+ Average Time: 5
+
+ --- 128 datanodes  ---
+ Elapsed Time: 15
+  Ops per sec: 66.66666666666667
+ Average Time: 2
+
+ --- 256 datanodes  ---
+ Elapsed Time: 29
+  Ops per sec: 34.48275862068966
+ Average Time: 4
+ Everything done!
+
+
+
+Elapsed Time
+1		10
+2		5
+4		6
+8		6
+16		7
+32		7
+64		8
+128		15
+256		29
+
+elapsedTime = time from start to finish
+
+reset
+unset key
+set title 'Elapsed Time per # Datanode Emulated'
+set ylabel "Elapsed Time (ms)"
+set xlabel "Number of Datanode"
+set grid
+set style data linespoints
+plot 'elapsed_time.dat'  using (log($1)):2:xtic(1) 
+
+
+Ops per sec
+1		100.0
+2		200.0
+4		166.66666666666666
+8		166.66666666666666
+16		142.85714285714286
+32		142.85714285714286
+64		125.0
+128		66.66666666666667
+256		34.48275862068966
+
+ExecutionSpeed = numOpsExecuted / elapsedTime * 1000
+
+reset
+unset key
+set title 'Execution Speed per # Datanode Emulated'
+set ylabel "Operation per Second"
+set xlabel "Number of Datanode"
+set grid
+set style data linespoints
+plot [:][:210] 'elapsed_time.dat'  using (log($1)):2:xtic(1) 
+
+
+Average Time
+1		9
+2		5
+4		5
+8		6
+16		6
+32		6
+64		5
+128		2
+256		4
+
+AverageTime = cumulativeTime / numOpsExecuted
+
+reset
+unset key
+set title 'Average Execution Time per # Datanode Emulated'
+set ylabel "Average Time (ms)"
+set xlabel "Number of Datanode"
+set grid
+set style data linespoints
+plot 'elapsed_time.dat'  using (log($1)):2:xtic(1) 
+
+
+
+
+
+
+
+
+
+
+
