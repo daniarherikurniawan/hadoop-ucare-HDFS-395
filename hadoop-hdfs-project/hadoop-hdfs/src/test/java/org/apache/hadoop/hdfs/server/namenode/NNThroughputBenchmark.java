@@ -265,7 +265,7 @@ public class NNThroughputBenchmark {
               incrementStats(d.localNumOpsExecuted, d.localCumulativeTime);
               // System.out.println(d.toString() + ": ops Exec = " + d.localNumOpsExecuted);
             }
-            LOG.info("Daniar : numThreads "+numThreads);
+            // LOG.info("Daniar : numThreads "+numThreads);
             LOG.info("--- " + curNumThread + " datanodes  ---");
             this.printStats();
           }
@@ -374,7 +374,7 @@ public class NNThroughputBenchmark {
     }
 
     void printStats() {
-      LOG.info("--- " + getOpName() + " stats  ---");
+      LOG.info("---:: " + getOpName() + " stats  ---");
       LOG.info("# operations: " + getNumOpsExecuted());
       LOG.info("Elapsed Time: " + getElapsedTime());
       LOG.info(" Ops per sec: " + getOpsPerSecond());
