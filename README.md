@@ -8,8 +8,7 @@
 	cd /mnt/extra/hadoop/
 	./runbench.sh
 
-	benchmark result: 
-		/users/riza/NNThroughput.out
+	git pull ucare-github-dan master
 ```
 
 
