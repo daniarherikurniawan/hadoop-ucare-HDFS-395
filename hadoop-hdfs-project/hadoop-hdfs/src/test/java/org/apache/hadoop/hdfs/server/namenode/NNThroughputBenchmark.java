@@ -217,10 +217,13 @@ public class NNThroughputBenchmark {
     }
 
     void benchmark() throws IOException {
+      LOG.info("Daniar 1 : numThreads "+numThreads);
       daemons = new ArrayList<StatsDaemon>();
       long start = 0;
       int curNumThread = 1;
       try {
+
+        LOG.info("Daniar 2 : numThreads "+numThreads);
         numOpsExecuted = 0;
         cumulativeTime = 0;
         if(numThreads < 1)
@@ -234,6 +237,8 @@ public class NNThroughputBenchmark {
           if(opsPerThread[tIdx] == 0)
             opsPerThread[tIdx] = 1;
         }
+
+        LOG.info("Daniar 3 : numThreads "+numThreads);
         // if numThreads > numOpsRequired then the remaining threads will do nothing
         for(; tIdx < numThreads; tIdx++)
           opsPerThread[tIdx] = 0;
@@ -241,6 +246,7 @@ public class NNThroughputBenchmark {
         generateInputs(opsPerThread);
 	setNameNodeLoggingLevel(logLevel);
 
+        LOG.info("Daniar 4 : numThreads "+numThreads);
         while (curNumThread <= numThreads) {
         numOpsExecuted = 0;
         cumulativeTime = 0;
@@ -265,7 +271,6 @@ public class NNThroughputBenchmark {
             incrementStats(d.localNumOpsExecuted, d.localCumulativeTime);
             // System.out.println(d.toString() + ": ops Exec = " + d.localNumOpsExecuted);
           }
-            LOG.info("Daniar : numThreads "+numThreads);
           LOG.info("--- " + curNumThread + " datanodes  ---");
           this.printStats();
         }
