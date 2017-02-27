@@ -1,0 +1,468 @@
+error 
+
+
+17/02/26 05:36:40 WARN hdfs.StateChange: BLOCK* blockReceived: blk_-4354161689022865168_1502968{blockUCState=UNDER_CONSTRUCTION, primaryNodeIndex=-1, replicas=[ReplicaUnderConstruction[pc795.emulab.net:100209|RBW], ReplicaUnderConstruction[pc795.emulab.net:100779|RBW], ReplicaUnderConstruction[pc795.emulab.net:100562|RBW]]} is received from dead or unregistered node pc795.emulab.net:100209
+17/02/26 05:36:40 INFO namenode.NNThroughputBenchmark: Everything done!
+17/02/26 05:36:40 ERROR namenode.NNThroughputBenchmark: java.io.IOException: blk_-4 354 161 689 022 865 168_1502968{blockUCState=UNDER_CONSTRUCTION, primaryNodeIndex=-1, replicas=[ReplicaUnderConstruction[pc795.emulab.net:100209|RBW], ReplicaUnderConstruction[pc795.emulab.net:100779|RBW], ReplicaUnderConstruction[pc795.emulab.net:100562|RBW]]} is received from dead or unregistered node pc795.emulab.net:100209
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.blockReceived(BlockManager.java:2134)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.blockReceived(NameNode.java:1220)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark$BlockReportStats.addBlocks(NNThroughputBenchmark.java:1027)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark$BlockReportStats.generateInputs(NNThroughputBenchmark.java:1008)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark$OperationStatsBase.benchmark(NNThroughputBenchmark.java:246)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark.runBenchmark(NNThroughputBenchmark.java:1299)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark.main(NNThroughputBenchmark.java:1317)
+
+17/02/26 05:36:40 INFO mortbay.log: Stopped SelectChannelConnector@0.0.0.0:50070
+17/02/26 05:36:40 INFO namenode.FSEditLog: Ending log segment 1
+17/02/26 05:36:40 WARN blockmanagement.DecommissionManager: Monitor interrupted: java.lang.InterruptedException: sleep interrupted
+17/02/26 05:36:40 INFO namenode.FSEditLog: Number of transactions: 4520927 Total time for transactions(ms): 34810Number of transactions batched in Syncs: 0 Number of syncs: 3003938 SyncTimes(ms): 446402
+17/02/26 05:36:40 ERROR blockmanagement.HeartbeatManager: Exception while checking heartbeat
+java.lang.NullPointerException
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlocksMap.removeNode(BlocksMap.java:164)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.removeStoredBlock(BlockManager.java:2012)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.removeBlocksAssociatedTo(BlockManager.java:759)
+	at org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager.removeDatanode(DatanodeManager.java:265)
+	at org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager.removeDeadDatanode(DatanodeManager.java:306)
+	at org.apache.hadoop.hdfs.server.blockmanagement.HeartbeatManager.heartbeatCheck(HeartbeatManager.java:223)
+	at org.apache.hadoop.hdfs.server.blockmanagement.HeartbeatManager$Monitor.run(HeartbeatManager.java:244)
+	at java.lang.Thread.run(Thread.java:745)
+17/02/26 05:36:40 WARN blockmanagement.BlockManager: ReplicationMonitor thread received Runtime exception.
+java.lang.NullPointerException
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlocksMap.getINode(BlocksMap.java:97)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.computeReplicationWorkForBlock(BlockManager.java:1084)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.computeReplicationWork(BlockManager.java:928)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.computeDatanodeWork(BlockManager.java:2552)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager$ReplicationMonitor.run(BlockManager.java:2512)
+	at java.lang.Thread.run(Thread.java:745)
+17/02/26 05:36:40 INFO ipc.Server: Stopping server on 9000
+node-0:/mnt/extra/hadoop> \342\211\210\342\211\210\303\247\303\247packet_write_wait: Connection to 155.98.36.95 port 22: Broken pipe
+daniar:~$
+
+
+
+
+
+
+17/02/26 10:00:25 ERROR namenode.NNThroughputBenchmark: java.io.IOException: blk_-4326688149689213960_510180{blockUCState=UNDER_CONSTRUCTION, primaryNodeIndex=-1, replicas=[ReplicaUnderConstruction[pc795.emulab.net:100734|RBW], ReplicaUnderConstruction[pc795.emulab.net:100942|RBW], ReplicaUnderConstruction[pc795.emulab.net:100932|RBW]]} is received from dead or unregistered node pc795.emulab.net:100734
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.blockReceived(BlockManager.java:214
+
+
+
+
+=================================================================================
+
+17/02/26 21:32:57 INFO namenode.NNThroughputBenchmark: blocksPerReport = 1000
+17/02/26 21:32:57 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1
+17/02/26 21:32:57 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/02/26 21:32:57 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/02/26 21:32:57 INFO namenode.NNThroughputBenchmark: Elapsed Time: 130
+17/02/26 21:32:57 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.6923076923076925
+17/02/26 21:32:57 INFO namenode.NNThroughputBenchmark: Average Time: 4
+
+
+Starting 1 blockReport(s).
+--- 1 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 12
+ Ops per sec: 83.33333333333333
+Average Time: 12
+Starting 1 blockReport(s).
+--- 2 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 6
+ Ops per sec: 166.66666666666666
+Average Time: 6
+Starting 1 blockReport(s).
+--- 4 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 7
+ Ops per sec: 142.85714285714286
+Average Time: 6
+Starting 1 blockReport(s).
+--- 8 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 7
+ Ops per sec: 142.85714285714286
+Average Time: 6
+Starting 1 blockReport(s).
+--- 16 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 8
+ Ops per sec: 125.0
+Average Time: 7
+Starting 1 blockReport(s).
+--- 32 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 9
+ Ops per sec: 111.11111111111111
+Average Time: 9
+Starting 1 blockReport(s).
+--- 64 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 7
+ Ops per sec: 142.85714285714286
+Average Time: 6
+Starting 1 blockReport(s).
+--- 128 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 14
+ Ops per sec: 71.42857142857143
+Average Time: 6
+Starting 1 blockReport(s).
+--- 256 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 31
+ Ops per sec: 32.25806451612903
+Average Time: 6
+Starting 1 blockReport(s).
+--- 512 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 60
+ Ops per sec: 16.666666666666668
+Average Time: 6
+Starting 1 blockReport(s).
+--- 1024 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 130
+ Ops per sec: 7.6923076923076925
+Average Time: 4
+Everything done!
+17/02/26 21:32:57 INFO namenode.NNThroughputBenchmark:
+
+
+==========================================================================
+
+
+Starting 1 blockReport(s).
+--- 1 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 18
+ Ops per sec: 55.55555555555556
+Average Time: 18
+Starting 1 blockReport(s).
+--- 2 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 12
+ Ops per sec: 83.33333333333333
+Average Time: 12
+Starting 1 blockReport(s).
+--- 4 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 12
+ Ops per sec: 83.33333333333333
+Average Time: 12
+Starting 1 blockReport(s).
+--- 8 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 11
+ Ops per sec: 90.9090909090909
+Average Time: 11
+Starting 1 blockReport(s).
+--- 16 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 11
+ Ops per sec: 90.9090909090909
+Average Time: 11
+Starting 1 blockReport(s).
+--- 32 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 10
+ Ops per sec: 100.0
+Average Time: 10
+Starting 1 blockReport(s).
+--- 64 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 10
+ Ops per sec: 100.0
+Average Time: 10
+Starting 1 blockReport(s).
+--- 128 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 16
+ Ops per sec: 62.5
+Average Time: 10
+Starting 1 blockReport(s).
+--- 256 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 27
+ Ops per sec: 37.03703703703704
+Average Time: 6
+Starting 1 blockReport(s).
+--- 512 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 62
+ Ops per sec: 16.129032258064516
+Average Time: 3
+Starting 1 blockReport(s).
+--- 1024 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 130
+ Ops per sec: 7.6923076923076925
+Average Time: 1
+Everything done!
+
+
+17/02/26 21:42:27 INFO namenode.NNThroughputBenchmark: blocksPerReport = 2000
+17/02/26 21:42:27 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1
+17/02/26 21:42:27 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/02/26 21:42:27 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/02/26 21:42:27 INFO namenode.NNThroughputBenchmark: Elapsed Time: 130
+17/02/26 21:42:27 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.6923076923076925
+17/02/26 21:42:27 INFO namenode.NNThroughputBenchmark: Average Time: 1
+
+
+
+==========================================================================
+
+
+Starting 1 blockReport(s).
+--- 1 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 20
+ Ops per sec: 50.0
+Average Time: 20
+Starting 1 blockReport(s).
+--- 2 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 16
+ Ops per sec: 62.5
+Average Time: 15
+Starting 1 blockReport(s).
+--- 4 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 15
+ Ops per sec: 66.66666666666667
+Average Time: 15
+Starting 1 blockReport(s).
+--- 8 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 15
+ Ops per sec: 66.66666666666667
+Average Time: 15
+Starting 1 blockReport(s).
+--- 16 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 14
+ Ops per sec: 71.42857142857143
+Average Time: 13
+Starting 1 blockReport(s).
+--- 32 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 15
+ Ops per sec: 66.66666666666667
+Average Time: 15
+Starting 1 blockReport(s).
+--- 64 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 13
+ Ops per sec: 76.92307692307692
+Average Time: 12
+Starting 1 blockReport(s).
+--- 128 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 14
+ Ops per sec: 71.42857142857143
+Average Time: 13
+Starting 1 blockReport(s).
+--- 256 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 31
+ Ops per sec: 32.25806451612903
+Average Time: 13
+Starting 1 blockReport(s).
+--- 512 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 65
+ Ops per sec: 15.384615384615385
+Average Time: 2
+Starting 1 blockReport(s).
+--- 1024 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 134
+ Ops per sec: 7.462686567164179
+Average Time: 3
+Everything done!
+17/02/26 21:53:39 INFO namenode.NNThroughputBenchmark:
+
+
+
+17/02/26 21:53:39 INFO namenode.NNThroughputBenchmark: blocksPerReport = 3000
+17/02/26 21:53:39 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1
+17/02/26 21:53:39 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/02/26 21:53:39 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/02/26 21:53:39 INFO namenode.NNThroughputBenchmark: Elapsed Time: 134
+17/02/26 21:53:39 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.462686567164179
+17/02/26 21:53:39 INFO namenode.NNThroughputBenchmark: Average Time: 3
+
+
+==========================================================================
+
+
+Daniar 4 : numThreads 1024
+Starting 1 blockReport(s).
+--- 1 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 28
+ Ops per sec: 35.714285714285715
+Average Time: 27
+Starting 1 blockReport(s).
+--- 2 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 22
+ Ops per sec: 45.45454545454545
+Average Time: 21
+Starting 1 blockReport(s).
+--- 4 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 19
+ Ops per sec: 52.63157894736842
+Average Time: 19
+Starting 1 blockReport(s).
+--- 8 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 18
+ Ops per sec: 55.55555555555556
+Average Time: 17
+Starting 1 blockReport(s).
+--- 16 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 17
+ Ops per sec: 58.8235294117647
+Average Time: 17
+Starting 1 blockReport(s).
+--- 32 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 13
+ Ops per sec: 76.92307692307692
+Average Time: 13
+Starting 1 blockReport(s).
+--- 64 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 6
+ Ops per sec: 166.66666666666666
+Average Time: 6
+Starting 1 blockReport(s).
+--- 128 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 13
+ Ops per sec: 76.92307692307692
+Average Time: 3
+Starting 1 blockReport(s).
+--- 256 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 27
+ Ops per sec: 37.03703703703704
+Average Time: 2
+Starting 1 blockReport(s).
+--- 512 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 60
+ Ops per sec: 16.666666666666668
+Average Time: 4
+Starting 1 blockReport(s).
+--- 1024 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 128
+ Ops per sec: 7.8125
+Average Time: 2
+Everything done!
+17/02/26 22:07:15 INFO namenode.NNThroughputBenchmark:
+
+
+
+17/02/26 22:07:15 INFO namenode.NNThroughputBenchmark: blocksPerReport = 4000
+17/02/26 22:07:15 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1
+17/02/26 22:07:15 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/02/26 22:07:15 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/02/26 22:07:15 INFO namenode.NNThroughputBenchmark: Elapsed Time: 128
+17/02/26 22:07:15 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.8125
+17/02/26 22:07:15 INFO namenode.NNThroughputBenchmark: Average Time: 2
+
+
+
+======================================================================================
+
+17/02/26 23:06:36 WARN hdfs.StateChange: BLOCK* blockReceived: blk_2865154048125169129_1638745{blockUCState=UNDER_CONSTRUCTION, primaryNodeIndex=-1, replicas=[ReplicaUnderConstruction[pc711.emulab.net:100172|RBW], ReplicaUnderConstruction[pc711.emulab.net:100168|RBW], ReplicaUnderConstruction[pc711.emulab.net:100078|RBW]]} is received from dead or unregistered node pc711.emulab.net:100078
+17/02/26 23:06:36 INFO namenode.NNThroughputBenchmark: Everything done!
+17/02/26 23:06:36 ERROR namenode.NNThroughputBenchmark: java.io.IOException: blk_2865154048125169129_1638745{blockUCState=UNDER_CONSTRUCTION, primaryNodeIndex=-1, replicas=[ReplicaUnderConstruction[pc711.emulab.net:100172|RBW], ReplicaUnderConstruction[pc711.emulab.net:100168|RBW], ReplicaUnderConstruction[pc711.emulab.net:100078|RBW]]} is received from dead or unregistered node pc711.emulab.net:100078
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.blockReceived(BlockManager.java:2140)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.blockReceived(NameNode.java:1220)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark$BlockReportStats.addBlocks(NNThroughputBenchmark.java:1027)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark$BlockReportStats.generateInputs(NNThroughputBenchmark.java:1008)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark$OperationStatsBase.benchmark(NNThroughputBenchmark.java:246)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark.runBenchmark(NNThroughputBenchmark.java:1299)
+	at org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark.main(NNThroughputBenchmark.java:1317)
+
+17/02/26 23:06:36 INFO mortbay.log: Stopped SelectChannelConnector@0.0.0.0:50070
+17/02/26 23:06:36 WARN blockmanagement.DecommissionManager: Monitor interrupted: java.lang.InterruptedException: sleep interrupted
+17/02/26 23:06:36 INFO namenode.FSEditLog: Ending log segment 1
+17/02/26 23:06:36 INFO namenode.FSEditLog: Number of transactions: 4929616 Total time for transactions(ms): 39316Number of transactions batched in Syncs: 0 Number of syncs: 3275492 SyncTimes(ms): 487019
+17/02/26 23:06:36 ERROR blockmanagement.HeartbeatManager: Exception while checking heartbeat
+java.lang.NullPointerException
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlocksMap.getINode(BlocksMap.java:97)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.removeStoredBlock(BlockManager.java:2032)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.removeBlocksAssociatedTo(BlockManager.java:759)
+	at org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager.removeDatanode(DatanodeManager.java:265)
+	at org.apache.hadoop.hdfs.server.blockmanagement.DatanodeManager.removeDeadDatanode(DatanodeManager.java:306)
+	at org.apache.hadoop.hdfs.server.blockmanagement.HeartbeatManager.heartbeatCheck(HeartbeatManager.java:223)
+	at org.apache.hadoop.hdfs.server.blockmanagement.HeartbeatManager$Monitor.run(HeartbeatManager.java:244)
+	at java.lang.Thread.run(Thread.java:745)
+17/02/26 23:06:36 WARN blockmanagement.BlockManager: ReplicationMonitor thread received Runtime exception.
+java.lang.NullPointerException
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlocksMap.getINode(BlocksMap.java:97)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.computeReplicationWorkForBlock(BlockManager.java:1084)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.computeReplicationWork(BlockManager.java:928)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager.computeDatanodeWork(BlockManager.java:2558)
+	at org.apache.hadoop.hdfs.server.blockmanagement.BlockManager$ReplicationMonitor.run(BlockManager.java:2518)
+	at java.lang.Thread.run(Thread.java:745)
+17/02/26 23:06:36 INFO ipc.Server: Stopping server on 9000
+17/02/26 23:06:36 INFO ipc.Server: IPC Server handler 0 on 9000: exiting
+17/02/26 23:06:36 INFO ipc.Server: Stopping IPC Server listener on 9000
+17/02/26 23:06:36 INFO ipc.Server: Stopping IPC Server Responder
+17/02/26 23:06:36 INFO impl.MetricsSystemImpl: Stopping NameNode metrics system...
+17/02/26 23:06:36 INFO impl.MetricsSystemImpl: Stopping metrics source UgiMetrics
+node-0:/mnt/extra/hadoop>
