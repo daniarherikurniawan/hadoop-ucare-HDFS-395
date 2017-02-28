@@ -72,7 +72,6 @@ plot  'elapsed_time_2.dat' using (log($1)):2:xtic(1)
 
 
 reset
-unset key
 set title 'Elapsed Time per # Datanode Emulated'
 set ylabel "Elapsed Time (ms)"
 set xlabel "Number of Datanode"
