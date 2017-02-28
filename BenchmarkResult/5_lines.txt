@@ -466,3 +466,104 @@ java.lang.NullPointerException
 17/02/26 23:06:36 INFO impl.MetricsSystemImpl: Stopping NameNode metrics system...
 17/02/26 23:06:36 INFO impl.MetricsSystemImpl: Stopping metrics source UgiMetrics
 node-0:/mnt/extra/hadoop>
+
+
+
+
+
+============================================================================
+Starting 1 blockReport(s).
+--- 1 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 34
+ Ops per sec: 29.41176470588235
+Average Time: 33
+Starting 1 blockReport(s).
+--- 2 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 29
+ Ops per sec: 34.48275862068966
+Average Time: 29
+Starting 1 blockReport(s).
+--- 4 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 27
+ Ops per sec: 37.03703703703704
+Average Time: 26
+Starting 1 blockReport(s).
+--- 8 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 25
+ Ops per sec: 40.0
+Average Time: 25
+Starting 1 blockReport(s).
+--- 16 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 14
+ Ops per sec: 71.42857142857143
+Average Time: 14
+Starting 1 blockReport(s).
+--- 32 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 14
+ Ops per sec: 71.42857142857143
+Average Time: 14
+Starting 1 blockReport(s).
+--- 64 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 9
+ Ops per sec: 111.11111111111111
+Average Time: 6
+Starting 1 blockReport(s).
+--- 128 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 13
+ Ops per sec: 76.92307692307692
+Average Time: 3
+Starting 1 blockReport(s).
+--- 256 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 29
+ Ops per sec: 34.48275862068966
+Average Time: 5
+Starting 1 blockReport(s).
+--- 512 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 65
+ Ops per sec: 15.384615384615385
+Average Time: 5
+Starting 1 blockReport(s).
+--- 1024 datanodes  ---
+--- blockReport stats  ---
+# operations: 1
+Elapsed Time: 129
+ Ops per sec: 7.751937984496124
+Average Time: 3
+Everything done!
+17/02/27 16:59:54 INFO namenode.NNThroughputBenchmark:
+
+
+17/02/27 16:59:54 INFO namenode.NNThroughputBenchmark: blocksPerReport = 5000
+17/02/27 16:59:54 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1
+17/02/27 16:59:54 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/02/27 16:59:54 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/02/27 16:59:54 INFO namenode.NNThroughputBenchmark: Elapsed Time: 129
+17/02/27 16:59:54 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.751937984496124
+17/02/27 16:59:54 INFO namenode.NNThroughputBenchmark: Average Time: 3
+
+============================================================================
+
+
+
+
+
