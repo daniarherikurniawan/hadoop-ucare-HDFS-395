@@ -849,13 +849,15 @@ public class NNThroughputBenchmark {
         }
         return false;
       }
-      try 
-      {
-          Thread.sleep(20);
-      } 
-      catch(InterruptedException e)
-      {
-           Thread.currentThread().interrupt();
+      if(nrBlocks % 4000 == 0){
+        try 
+        {
+            Thread.sleep(2000);
+        } 
+        catch(InterruptedException e)
+        {
+             Thread.currentThread().interrupt();
+        }
       }
       blocks.add(blk);
       nrBlocks++;
@@ -1010,7 +1012,7 @@ public class NNThroughputBenchmark {
       String clientName = getClientName(007);
       nameNode.setSafeMode(FSConstants.SafeModeAction.SAFEMODE_LEAVE);
       for(int idx=0; idx < nrFiles; idx++) {
-        LOG.info("DAN: creating files number : "+idx);
+        // LOG.info("DAN: creating files number : "+idx);
         String fileName = nameGenerator.getNextFileName("ThroughputBench");
         nameNode.create(fileName, FsPermission.getDefault(), clientName,
             new EnumSetWritable<CreateFlag>(EnumSet.of(CreateFlag.CREATE, CreateFlag.OVERWRITE)), true, replication,
