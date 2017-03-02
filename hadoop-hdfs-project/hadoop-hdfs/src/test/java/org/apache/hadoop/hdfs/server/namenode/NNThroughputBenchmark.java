@@ -244,38 +244,38 @@ public class NNThroughputBenchmark {
           opsPerThread[tIdx] = 0;
         setNameNodeLoggingLevel(Level.WARN);
         generateInputs(opsPerThread);
-	setNameNodeLoggingLevel(logLevel);
+	      setNameNodeLoggingLevel(logLevel);
 
         LOG.info("Daniar 4 : numThreads "+numThreads);
         while (curNumThread <= numThreads) {
-        numOpsExecuted = 0;
-        cumulativeTime = 0;
-        
-        try {
-          daemons.clear();
-          for(tIdx=0; tIdx < curNumThread; tIdx++)
-            daemons.add(new StatsDaemon(tIdx, opsPerThread[tIdx], this));
+          numOpsExecuted = 0;
+          cumulativeTime = 0;
+          
+          try {
+            daemons.clear();
+            for(tIdx=0; tIdx < curNumThread; tIdx++)
+              daemons.add(new StatsDaemon(tIdx, opsPerThread[tIdx], this));
 
-          start = System.currentTimeMillis();
-          LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
-          for(nIdx=0; nIdx < curNumThread; nIdx++)
-            daemons.get(nIdx).start();
+            start = System.currentTimeMillis();
+            LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
+            for(nIdx=0; nIdx < curNumThread; nIdx++)
+              daemons.get(nIdx).start();
 
-        } finally {
-          while(isInPorgress()) {
-            // try {Thread.sleep(500);} catch (InterruptedException e) {}
+          } finally {
+            while(isInPorgress()) {
+              // try {Thread.sleep(500);} catch (InterruptedException e) {}
+            }
+            elapsedTime = System.currentTimeMillis() - start;
+            for(nIdx=0; nIdx < curNumThread; nIdx++) {
+              StatsDaemon d = daemons.get(nIdx);
+              incrementStats(d.localNumOpsExecuted, d.localCumulativeTime);
+              // System.out.println(d.toString() + ": ops Exec = " + d.localNumOpsExecuted);
+            }
+            LOG.info("--- " + curNumThread + " datanodes  ---");
+            this.printStats();
           }
-          elapsedTime = System.currentTimeMillis() - start;
-          for(nIdx=0; nIdx < curNumThread; nIdx++) {
-            StatsDaemon d = daemons.get(nIdx);
-            incrementStats(d.localNumOpsExecuted, d.localCumulativeTime);
-            // System.out.println(d.toString() + ": ops Exec = " + d.localNumOpsExecuted);
-          }
-          LOG.info("--- " + curNumThread + " datanodes  ---");
-          this.printStats();
-        }
 
-        curNumThread = curNumThread * 2;
+          curNumThread = curNumThread * 2;
         }
 
       } finally {  
@@ -1001,6 +1001,7 @@ public class NNThroughputBenchmark {
       String clientName = getClientName(007);
       nameNode.setSafeMode(FSConstants.SafeModeAction.SAFEMODE_LEAVE);
       for(int idx=0; idx < nrFiles; idx++) {
+        Log.info("DAN: creating files number : "+idx);
         String fileName = nameGenerator.getNextFileName("ThroughputBench");
         nameNode.create(fileName, FsPermission.getDefault(), clientName,
             new EnumSetWritable<CreateFlag>(EnumSet.of(CreateFlag.CREATE, CreateFlag.OVERWRITE)), true, replication,
