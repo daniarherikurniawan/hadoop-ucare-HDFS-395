@@ -853,6 +853,7 @@ public class NNThroughputBenchmark {
       blocks.add(blk);
       nrBlocks++;
 
+      LOG.info("nrBlocks = " + nrBlocks);
       return true;
     }
 
@@ -1009,7 +1010,7 @@ public class NNThroughputBenchmark {
           LOG.info("DAN: DELAY ");
           try 
           {
-              Thread.sleep(1000);
+              Thread.sleep(30);
           } 
           catch(InterruptedException e)
           {
