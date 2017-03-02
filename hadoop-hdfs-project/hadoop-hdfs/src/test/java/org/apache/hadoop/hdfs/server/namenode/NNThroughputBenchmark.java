@@ -853,10 +853,10 @@ public class NNThroughputBenchmark {
       blocks.add(blk);
       nrBlocks++;
       LOG.info("nrBlocks = " + nrBlocks);
-      if(nrBlocks % 4000 == 0){
+      if(nrBlocks % 10000 == 0){
         try 
         {
-            Thread.sleep(2000);
+            Thread.currentThread().sleep(2);
         } 
         catch(InterruptedException e)
         {
