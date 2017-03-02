@@ -564,6 +564,249 @@ Everything done!
 ============================================================================
 
 
+O impl.MetricsSystemImpl: Registered source RpcActivityForPort9000
+17/02/28 00:51:22 INFO impl.MetricsSystemImpl: Registered source RpcDetailedActivityForPort9000
+17/02/28 00:51:22 INFO namenode.FSNamesystem: Number of blocks under construction: 0
+17/02/28 00:51:22 INFO namenode.FSNamesystem: initializing replication queues
+17/02/28 00:51:22 INFO blockmanagement.BlockManager: Total number of blocks            = 0
+17/02/28 00:51:22 INFO blockmanagement.BlockManager: Number of invalid blocks          = 0
+17/02/28 00:51:22 INFO blockmanagement.BlockManager: Number of under-replicated blocks = 0
+17/02/28 00:51:22 INFO blockmanagement.BlockManager: Number of  over-replicated blocks = 0
+17/02/28 00:51:22 INFO hdfs.StateChange: STATE* Replication Queue initialization scan for invalid, over- and under-replicated blocks completed in 57 msec
+17/02/28 00:51:22 INFO hdfs.StateChange: STATE* Leaving safe mode after 0 secs.
+17/02/28 00:51:22 INFO hdfs.StateChange: STATE* Network topology has 0 racks and 0 datanodes
+17/02/28 00:51:22 INFO hdfs.StateChange: STATE* UnderReplicatedBlocks has 0 blocks
+17/02/28 00:51:22 INFO impl.MetricsSystemImpl: Registered source FSNamesystem
 
+
+17/02/28 00:51:23 INFO namenode.NameNode: NameNode up at: node-0-lan0/10.1.1.2:9000
+17/02/28 00:51:23 INFO ipc.Server: IPC Server handler 0 on 9000: starting
+17/02/28 00:51:23 INFO namenode.NNThroughputBenchmark: Starting benchmark: blockReport
+17/02/28 00:51:23 INFO namenode.NNThroughputBenchmark: Daniar 1 : numThreads 64
+17/02/28 00:51:23 INFO namenode.NNThroughputBenchmark: Daniar 2 : numThreads 64
+17/02/28 00:51:23 INFO namenode.NNThroughputBenchmark: Daniar 3 : numThreads 64
+17/02/28 00:51:23 FATAL namenode.NNThroughputBenchmark: Log level = WARN
+
+
+ Datanode is DatanodeRegistration(pc856.emulab.net:100000, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100001, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100002, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100003, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100004, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100005, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100006, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100007, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100008, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100009, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100010, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100011, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100012, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100013, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100014, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100015, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100016, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100017, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100018, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100019, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100020, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100021, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100022, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100023, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100024, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100025, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100026, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100027, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100028, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100029, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100030, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100031, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100032, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100033, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100034, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100035, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100036, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100037, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100038, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100039, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100040, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100041, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100042, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100043, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100044, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100045, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100046, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100047, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100048, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100049, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100050, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100051, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100052, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100053, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100054, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100055, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100056, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100057, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100058, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100059, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100060, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100061, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100062, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+ Datanode is DatanodeRegistration(pc856.emulab.net:100063, storageID=, infoPort=-1, ipcPort=-1, storageInfo=lv=-38;cid=CID-31217965-3e9c-4cd8-a391-1e43342d1d0f;nsid=2017945638;c=0)
+17/02/28 00:51:23 INFO namenode.NNThroughputBenchmark: Creating 1067 with 1 blocks each.
+
+
+
+
+
+
+17/03/01 21:04:57 INFO namenode.NNThroughputBenchmark: Daniar 4 : numThreads 1
+17/03/01 21:04:57 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/01 21:04:57 INFO namenode.NNThroughputBenchmark: --- 1 datanodes  ---
+17/03/01 21:04:57 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/01 21:04:57 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/01 21:04:57 INFO namenode.NNThroughputBenchmark: Elapsed Time: 125
+17/03/01 21:04:57 INFO namenode.NNThroughputBenchmark:  Ops per sec: 8.0
+17/03/01 21:04:57 INFO namenode.NNThroughputBenchmark: Average Time: 125
+17/03/01 21:04:57 INFO namenode.NNThroughputBenchmark: Everything done!
+
+
+
+
+17/03/01 20:46:32 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/01 20:46:32 INFO namenode.NNThroughputBenchmark: --- 1 datanodes  ---
+17/03/01 20:46:32 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/01 20:46:32 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/01 20:46:32 INFO namenode.NNThroughputBenchmark: Elapsed Time: 98
+17/03/01 20:46:32 INFO namenode.NNThroughputBenchmark:  Ops per sec: 10.204081632653061
+17/03/01 20:46:32 INFO namenode.NNThroughputBenchmark: Average Time: 98
+17/03/01 20:46:32 INFO namenode.NNThroughputBenchmark: Everything done!
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+(1000, 1000, 997, 1000, 955, 1000, 1000, 1000, 993, 1000, 1000, 1000, 1000, 961, 1000, 1000, 999, 1000, 1000, 1000, 999, 1000, 980, 917, 1000, 1000, 1000, 1000, 1000, 989, 995, 1000, 959, 957, 1000, 1000, 1000, 1000, 968, 996, 1000, 1000, 998, 987, 978, 978, 954, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 928, 997, 965, 978, 1000, 992, 997, 1000, 1000, 972, 989, 1000, 1000, 952, 975, 986, 989, 1000, 1000, 963, 988, 1000, 981, 949, 996, 1000, 1000, 990, 1000, 989, 1000, 995, 1000, 978, 998, 999, 951, 1000, 997, 1000, 1000, 1000, 955, 983, 960, 1000, 1000, 1000, 1000, 973, 1000, 1000, 1000, 970, 1000, 1000, 974, 1000, 966, 1000, 993, 1000, 1000, 983, 986, 988, 1000, 974, 1000, 1000, 982, 1000, 1000, 990, 989, 1000, 1000, 988, 1000, 1000, 944, 934, 977, 1000, 916, 1000, 949, 988, 962, 923, 988, 974, 1000, 1000, 1000, 1000, 956, 1000, 998, 1000, 1000, 969, 995, 968, 995, 1000, 1000, 968, 1000, 1000, 973, 1000, 1000, 1000, 961, 1000, 974, 971, 1000, 1000, 973, 1000, 1000, 949, 1000, 1000, 1000, 978, 943, 1000, 1000, 993, 964, 980, 996, 973, 979, 1000, 949, 1000, 1000, 1000, 1000, 1000, 1000, 990, 980, 1000, 980, 1000, 1000, 963, 913, 963, 1000, 1000, 1000, 1000, 990, 1000, 1000, 977, 993, 995, 1000, 1000, 966, 1000, 1000, 1000, 988, 994, 1000, 964, 972, 1000, 1000, 941, 1000, 1000, 1000, 1000, 990, 1000, 956, 996, 994, 999, 1000, 1000, 972, 1000, 1000, 992, 972, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 974, 985, 1000, 1000, 996, 1000, 962, 1000, 979, 1000, 1000, 979, 985, 1000, 1000, 1000, 981, 972, 968, 1000, 1000, 1000, 1000, 948, 969, 1000, 998, 997, 989, 1000, 1000, 1000, 1000, 1000, 1000, 989, 931, 1000, 983, 982, 993, 993, 1000, 994, 1000, 938, 1000, 928, 1000, 1000, 986, 938, 1000, 1000, 1000, 1000, 990, 1000, 1000, 993, 1000, 934, 1000, 1000, 993, 1000, 992, 1000, 999, 956, 1000, 1000, 1000, 982, 1000, 981, 1000, 986, 977, 994, 970, 972, 1000, 1000, 973, 999, 1000, 967, 982, 1000, 1000, 1000, 1000, 974, 979, 982, 975, 990, 1000, 998, 1000, 994, 1000, 980, 985, 1000, 966, 996, 1000, 1000, 996, 1000, 1000, 1000, 1000, 979, 1000, 975, 985, 1000, 945, 974, 964, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 982, 1000, 995, 1000, 989, 922, 1000, 1000, 978, 950, 980, 948, 1000, 1000, 998, 993, 997, 964, 1000, 1000, 959, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 943, 1000, 975, 1000, 1000, 1000, 961, 1000, 967, 955, 1000, 988, 1000, 979, 984, 1000, 1000, 999, 993, 935, 946, 1000, 1000, 997, 1000, 995, 1000, 992, 975, 994, 1000, 1000, 1000, 1000, 990, 913, 1000, 960, 974, 1000, 1000, 998, 963, 1000, 971, 1000, 967, 939, 1000, 1000, 1000, 1000, 982, 1000, 957, 989, 1000, 973, 1000, 1000, 1000, 970, 952, 1000, 994, 954, 1000, 957, 984, 1000, 998, 974, 947, 1000, 1000, 1000, 964, 975, 979, 990, 988, 942, 993, 1000, 964, 999, 1000, 1000, 1000, 1000, 1000, 1000, 992, 1000, 1000, 1000, 1000, 961, 986, 984, 1000, 1000, 978, 983, 1000, 964, 1000, 1000, 1000, 1000, 988, 1000, 1000, 985, 956, 1000, 991, 941, 985, 940, 1000, 976, 1000, 1000, 1000, 1000, 974, 1000, 933, 933, 1000, 930, 955, 1000, 1000, 934, 1000, 1000, 1000, 979, 1000, 1000, 979, 1000, 1000, 1000, 1000, 968, 984, 1000, 1000, 1000, 951, 999, 1000, 1000, 1000, 989, 986, 967, 1000, 1000, 1000, 1000, 1000, 1000, 995, 1000, 1000, 966, 1000, 954, 999, 1000, 934, 959, 995, 968, 1000, 986, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 995, 1000, 914, 990, 961, 941, 1000, 1000, 1000, 1000, 1000, 994, 961, 961, 954, 951, 1000, 1000, 1000, 952, 951, 1000, 990, 993, 1000, 1000, 974, 1000, 965, 1000, 987, 942, 1000, 985, 989, 1000, 1000, 957, 1000, 1000, 1000, 961, 983, 1000, 1000, 987, 1000, 980, 1000, 1000, 1000, 951, 974, 1000, 984, 951, 962, 1000, 979, 1000, 974, 995, 1000, 1000, 964, 1000, 981, 1000, 1000, 944, 1000, 990, 1000, 1000, 988, 1000, 987, 1000, 1000, 1000, 1000, 1000, 975, 989, 1000, 1000, 1000, 1000, 1000, 1000, 982, 998, 1000, 976, 1000, 1000, 966, 1000, 968, 1000, 1000, 995, 997, 987, 1000, 992, 944, 1000, 1000, 1000, 995, 983, 984, 1000, 1000, 950, 1000, 990, 982, 1000, 971, 1000, 969, 1000, 983, 1000, 1000, 1000, 1000, 959, 964, 1000, 968, 1000, 1000, 1000, 972, 1000, 979, 968, 1000, 1000, 983, 1000, 996, 1000, 1000, 974, 1000, 1000, 1000, 972, 1000, 975, 1000, 1000, 1000, 943, 992, 960, 1000, 1000, 1000, 1000, 999, 968, 1000, 1000, 991, 1000, 1000, 1000, 997, 1000, 1000, 1000, 929, 1000, 970, 971, 1000, 983, 970, 1000, 1000, 1000, 945, 1000, 1000, 940, 1000, 982, 1000, 1000, 1000, 1000, 977, 1000, 958, 967, 1000, 999, 961, 961, 1000, 982, 985, 1000, 987, 980, 1000, 1000, 1000, 994, 1000, 979, 973, 1000, 922, 967, 1000, 985, 1000, 1000, 1000, 1000, 979, 971, 1000, 963, 985, 946, 1000, 942, 1000, 982, 1000, 1000, 980, 1000, 1000, 974, 990, 983, 955, 976, 1000, 968, 1000, 1000, 934, 1000, 1000, 1000, 1000, 935, 1000, 1000, 978, 982, 996, 1000, 1000, 1000, 1000, 1000, 999, 1000, 997, 944, 967, 988, 960, 1000, 985, 997, 1000, 958, 1000, 944, 989, 1000, 1000, 1000, 946, 987, 1000, 963, 998, 1000, 1000, 1000, 1000, 970, 968, 1000, 970, 1000, 960, 1000, 969, 1000, 1000, 1000, 1000, 1000, 967, 958, 980, 1000, 1000, 996, 1000, 921, 977, 1000, 1000, 1000, 994, 943, 962, 1000, 977, 959, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 994, 1000, 969, 1000, 970, 1000, 1000, 1000, 949, 970, 1000, 1000, 998, 1000, 968, 959, 1000, 1000, 911, 1000, 1000, 991, 1000, 1000, 962, 1000, 1000, 988, 976, 986, 1000, 927, 1000, 949, 1000, 999, 1000, 990, 1000, 1000, 989, 1000, 956, 1000, 1000, 981, 1000, 1000, 977, 1000, 987, 958, 1000, 1000, 1000, 1000, 950, 983, 972, 1000, 995, 1000, 1000, 1000, 949, 989, 987, 985, 1000, 955, 978, 940, 1000, 979, 1000, 1000, 1000, 966, 947, 1000, 948, 995, 994, 1000, 1000)
+17/03/02 16:16:45 INFO namenode.NNThroughputBenchmark: blocksPerReport = 1000
+17/03/02 16:16:45 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1000
+17/03/02 16:16:45 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:16:45 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:16:45 INFO namenode.NNThroughputBenchmark: Elapsed Time: 127
+17/03/02 16:16:45 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.874015748031496
+17/03/02 16:16:45 INFO namenode.NNThroughputBenchmark: Average Time: 1
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+17/03/02 16:32:15 INFO namenode.NNThroughputBenchmark: blocksPerReport = 10000
+17/03/02 16:32:15 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1000
+17/03/02 16:32:15 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:32:15 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:32:15 INFO namenode.NNThroughputBenchmark: Elapsed Time: 135
+17/03/02 16:32:15 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.407407407407407
+17/03/02 16:32:15 INFO namenode.NNThroughputBenchmark: Average Time: 6
+
+Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 1 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 57
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 17.54385964912281
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 57
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 2 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 36
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 27.77777777777778
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 35
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 4 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 21
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 47.61904761904762
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 21
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 8 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 11
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 90.9090909090909
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 11
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 16 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 11
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 90.9090909090909
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 11
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 32 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 11
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 90.9090909090909
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 11
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 64 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 10
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 100.0
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 10
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 128 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 14
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 71.42857142857143
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 11
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 256 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 30
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 33.333333333333336
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 11
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 512 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 59
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 16.949152542372882
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 3
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- 1024 datanodes  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Elapsed Time: 135
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.407407407407407
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Average Time: 6
+17/03/02 16:31:58 INFO namenode.NNThroughputBenchmark: Everything done!
+17/03/02 16:32:15 INFO namenode.NNThroughputBenchmark:
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
