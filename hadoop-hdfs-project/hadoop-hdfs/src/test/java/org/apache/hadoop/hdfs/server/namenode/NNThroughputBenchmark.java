@@ -849,7 +849,14 @@ public class NNThroughputBenchmark {
         }
         return false;
       }
-      Thread.sleep(4000);
+      try 
+      {
+          Thread.sleep(2000);
+      } 
+      catch(InterruptedException e)
+      {
+           Thread.currentThread().interrupt();
+      }
       blocks.add(blk);
       nrBlocks++;
       LOG.info("nrBlocks = " + nrBlocks);
