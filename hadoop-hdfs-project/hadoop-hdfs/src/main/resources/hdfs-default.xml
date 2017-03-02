@@ -404,8 +404,8 @@ creations/deletions), or "all".</description>
 
 <property>
   <name>dfs.heartbeat.interval</name>
-  <value>3</value>
-  <description>Determines datanode heartbeat interval in seconds.</description>
+  <value>5</value>
+  <description>DAN: Deafult 3. Determines datanode heartbeat interval in seconds.</description>
 </property>
 
 <property>
@@ -442,8 +442,9 @@ creations/deletions), or "all".</description>
 
 <property>
   <name>dfs.namenode.safemode.extension</name>
-  <value>30000</value>
+  <value>60000</value>
   <description>
+    DAN: default is 30000.
     Determines extension of safe mode in milliseconds 
     after the threshold level is reached.
   </description>
