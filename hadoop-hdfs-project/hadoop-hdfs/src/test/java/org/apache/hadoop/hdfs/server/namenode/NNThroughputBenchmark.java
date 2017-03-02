@@ -1003,7 +1003,7 @@ public class NNThroughputBenchmark {
       String clientName = getClientName(007);
       nameNode.setSafeMode(FSConstants.SafeModeAction.SAFEMODE_LEAVE);
       for(int idx=0; idx < nrFiles; idx++) {
-        Log.info("DAN: creating files number : "+idx);
+        LOG.info("DAN: creating files number : "+idx);
         String fileName = nameGenerator.getNextFileName("ThroughputBench");
         nameNode.create(fileName, FsPermission.getDefault(), clientName,
             new EnumSetWritable<CreateFlag>(EnumSet.of(CreateFlag.CREATE, CreateFlag.OVERWRITE)), true, replication,
