@@ -410,7 +410,7 @@ creations/deletions), or "all".</description>
 
 <property>
   <name>dfs.namenode.handler.count</name>
-  <value>10000</value>
+  <value>1000</value>
   <description>DAN: Default 10. The number of server threads for the namenode.</description>
 </property>
 
@@ -676,9 +676,9 @@ creations/deletions), or "all".</description>
 
 <property>
   <name>dfs.datanode.max.transfer.threads</name>
-  <value>4096</value>
+  <value>16384</value>
   <description>
-        Specifies the maximum number of threads to use for transferring data
+        DAN: default 4096. Specifies the maximum number of threads to use for transferring data
         in and out of the DN.
   </description>
 </property>
