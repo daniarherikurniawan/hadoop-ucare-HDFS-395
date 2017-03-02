@@ -849,7 +849,10 @@ public class NNThroughputBenchmark {
         }
         return false;
       }
-      LOG.info("nrBlocks = " + (nrBlocks));
+      
+      blocks.add(blk);
+      nrBlocks++;
+      LOG.info("nrBlocks = " + nrBlocks);
 
       LOG.info("nrBlocks % 4000 = " + (nrBlocks % 4000));
       LOG.info("nrBlocks % 4000 == 0 " + (nrBlocks % 4000  == 0));
@@ -866,9 +869,7 @@ public class NNThroughputBenchmark {
              Thread.currentThread().interrupt();
         }
       }
-      blocks.add(blk);
-      nrBlocks++;
-      LOG.info("nrBlocks = " + nrBlocks);
+
       return true;
     }
 
