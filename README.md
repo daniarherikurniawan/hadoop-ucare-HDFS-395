@@ -104,3 +104,11 @@ main()
 		      }
 		bench.close();
 
+[2/26/17, 10:35:36 PM] Riza Suminto: In processReport
+[2/26/17, 10:36:26 PM] Riza Suminto: Can you add log to print size of each list resulted from reportDiff?
+
+
+17000
+19000
+
+
