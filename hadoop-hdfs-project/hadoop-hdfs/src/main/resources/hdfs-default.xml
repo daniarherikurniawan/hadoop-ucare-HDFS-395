@@ -387,8 +387,8 @@ creations/deletions), or "all".</description>
 
 <property>
   <name>dfs.datanode.directoryscan.threads</name>
-  <value>1</value>
-  <description>How many threads should the threadpool used to compile reports
+  <value>10</value>
+  <description>DAN: default 1. How many threads should the threadpool used to compile reports
   for volumes in parallel have.
   </description>
 </property>
