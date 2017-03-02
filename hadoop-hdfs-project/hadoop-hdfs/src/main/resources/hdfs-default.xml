@@ -410,7 +410,7 @@ creations/deletions), or "all".</description>
 
 <property>
   <name>dfs.namenode.handler.count</name>
-  <value>1000</value>
+  <value>10000</value>
   <description>DAN: Default 10. The number of server threads for the namenode.</description>
 </property>
 
