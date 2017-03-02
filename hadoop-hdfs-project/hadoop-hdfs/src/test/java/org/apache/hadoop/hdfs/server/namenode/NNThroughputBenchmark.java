@@ -1003,8 +1003,9 @@ public class NNThroughputBenchmark {
       String clientName = getClientName(007);
       nameNode.setSafeMode(FSConstants.SafeModeAction.SAFEMODE_LEAVE);
       for(int idx=0; idx < nrFiles; idx++) {
+          LOG.info("DAN: idx = "+idx);
 
-        if( (nrFiles+1) % 1000 == 0){
+        if( (idx+1) % 1000 == 0){
           LOG.info("DAN: DELAY ");
           try 
           {
