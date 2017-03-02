@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.security.auth.login.LoginException;
 
@@ -848,6 +849,7 @@ public class NNThroughputBenchmark {
         }
         return false;
       }
+      Thread.sleep(4000);
       blocks.add(blk);
       nrBlocks++;
       LOG.info("nrBlocks = " + nrBlocks);
