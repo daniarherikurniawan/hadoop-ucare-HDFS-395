@@ -1010,7 +1010,7 @@ public class NNThroughputBenchmark {
           LOG.info("DAN: DELAY ");
           try 
           {
-              Thread.sleep(30);
+              Thread.sleep(1000);
           } 
           catch(InterruptedException e)
           {
