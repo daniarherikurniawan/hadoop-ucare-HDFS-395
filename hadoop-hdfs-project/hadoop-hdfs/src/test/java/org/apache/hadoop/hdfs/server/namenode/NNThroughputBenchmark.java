@@ -1024,6 +1024,7 @@ public class NNThroughputBenchmark {
         for(DatanodeInfo dnInfo : loc.getLocations()) {
           int dnIdx = Arrays.binarySearch(datanodes, dnInfo.getName());
           //LOG.info("Placing block "+dnInfo+" to datanode "+dnIdx);
+          // DAN: slow down the block adding
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
           nameNode.blockReceived(
               datanodes[dnIdx].dnRegistration, 
