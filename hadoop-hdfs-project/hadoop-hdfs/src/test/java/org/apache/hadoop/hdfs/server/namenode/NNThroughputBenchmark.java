@@ -849,8 +849,10 @@ public class NNThroughputBenchmark {
         }
         return false;
       }
+      LOG.info("nrBlocks = " + (nrBlocks));
+
       LOG.info("nrBlocks % 4000 = " + (nrBlocks % 4000));
-      LOG.info("nrBlocks % 4000 = " + (nrBlocks % 4000  == 0));
+      LOG.info("nrBlocks % 4000 == 0 " + (nrBlocks % 4000  == 0));
 
       if(nrBlocks % 4000 == 0){
         LOG.info("Hollaaaa");
