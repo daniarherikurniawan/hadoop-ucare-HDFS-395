@@ -76,8 +76,8 @@ creations/deletions), or "all".</description>
 
 <property>
   <name>dfs.datanode.handler.count</name>
-  <value>3</value>
-  <description>The number of server threads for the datanode.</description>
+  <value>30</value>
+  <description>DAN: default 3. The number of server threads for the datanode.</description>
 </property>
 
 <property>
@@ -332,8 +332,9 @@ creations/deletions), or "all".</description>
 
 <property>
   <name>dfs.client.block.write.replace-datanode-on-failure.enable</name>
-  <value>ture</value>
+  <value>true</value>
   <description>
+    DAN: default ture.
     If there is a datanode/network failure in the write pipeline,
     DFSClient will try to remove the failed datanode from the pipeline
     and then continue writing with the remaining datanodes. As a result,
@@ -404,13 +405,13 @@ creations/deletions), or "all".</description>
 
 <property>
   <name>dfs.heartbeat.interval</name>
-  <value>5</value>
-  <description>DAN: Deafult 3. Determines datanode heartbeat interval in seconds.</description>
+  <value>3</value>
+  <description>Determines datanode heartbeat interval in seconds.</description>
 </property>
 
 <property>
   <name>dfs.namenode.handler.count</name>
-  <value>1000</value>
+  <value>100</value>
   <description>DAN: Default 10. The number of server threads for the namenode.</description>
 </property>
 
