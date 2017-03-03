@@ -1006,7 +1006,7 @@ public class NNThroughputBenchmark {
       for(int idx=0; idx < nrFiles; idx++) {
           LOG.info("DAN: idx = "+idx);
 
-        if( (idx+1) % 1000 == 0){
+        if( (idx+1) % 500 == 0){
           LOG.info("DAN: DELAY ");
           try 
           {
