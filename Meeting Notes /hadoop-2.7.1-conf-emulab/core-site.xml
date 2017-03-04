@@ -35,7 +35,8 @@
 
 <property>
   <name>ipc.server.listen.queue.size</name>
-  <value>256</value>
+  <value>1024</value>
+  <!-- DAN: default 256 -->
 </property>
 
 </configuration>

@@ -495,6 +495,7 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
                                            DatanodeDescriptor writer,
                                            DatanodeDescriptor[] nodes) {
     if (nodes.length==0) return nodes;
+      LOG.warn("DAN: Use getPipeline in this file 1 ");
       
     synchronized(clusterMap) {
       int index=0;

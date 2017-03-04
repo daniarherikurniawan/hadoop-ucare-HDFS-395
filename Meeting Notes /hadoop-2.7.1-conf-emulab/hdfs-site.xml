@@ -56,8 +56,8 @@
 
   <property>
     <name>dfs.client.file-block-storage-locations.num-threads</name>
-    <value>64</value>
-    <description>Increase namenode RPC throughput.Valid value: 10-256</description>
+    <value>128</value>
+    <description>DAN: Default 64. Increase namenode RPC throughput.Valid value: 10-256</description>
   </property>
 
   <property>
