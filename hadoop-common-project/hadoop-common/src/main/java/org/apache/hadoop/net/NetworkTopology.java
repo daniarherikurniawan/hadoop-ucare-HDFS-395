@@ -377,18 +377,23 @@ public class NetworkTopology {
    */
   public boolean contains(Node node) {
     if (node == null) return false;
-    netlock.readLock().lock();
-    try {
-      Node parent = node.getParent();
-      for(int level=node.getLevel(); parent!=null&&level>0;
-          parent=parent.getParent(), level--) {
-        if (parent == clusterMap)
-          return true;
-      }
-    } finally {
-      netlock.readLock().unlock();
-    }
-    return false; 
+
+    // start DAN edit
+    return true;
+    // end DAN edit
+    
+    // netlock.readLock().lock();
+    // try {
+    //   Node parent = node.getParent();
+    //   for(int level=node.getLevel(); parent!=null&&level>0;
+    //       parent=parent.getParent(), level--) {
+    //     if (parent == clusterMap)
+    //       return true;
+    //   }
+    // } finally {
+    //   netlock.readLock().unlock();
+    // }
+    // return false; 
   }
     
   /** Given a string representation of a node, return its reference
