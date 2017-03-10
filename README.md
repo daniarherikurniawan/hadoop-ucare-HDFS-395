@@ -10,6 +10,9 @@
 
 	git pull ucare-github-dan master
 	vim runbench.sh
+
+	The config is in echo $HADOOP_CONF_DIR directory
+	cd /proj/ucare/git/hadoop-ucare/psbin/ucare_se_conf/hadoop-etc/hadoop-2.7.1
 ```
 
 
@@ -104,6 +107,7 @@ main()
 		      }
 		bench.close();
 
+[2/26/17, 10:35:00 PM] Riza Suminto: https://github.com/apache/hadoop/blob/73451ed2d9fb5eb228d80ad5f3be302a60496527/hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/server/blockmanagement/BlockManager.java
 [2/26/17, 10:35:36 PM] Riza Suminto: In processReport
 [2/26/17, 10:36:26 PM] Riza Suminto: Can you add log to print size of each list resulted from reportDiff?
 
@@ -111,4 +115,4 @@ main()
 17000
 19000
 
-
+1574027
