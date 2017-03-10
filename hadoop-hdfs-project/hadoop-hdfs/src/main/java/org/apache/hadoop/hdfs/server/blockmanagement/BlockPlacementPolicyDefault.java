@@ -504,23 +504,34 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
       }
       for(;index<nodes.length; index++) {
         DatanodeDescriptor shortestNode = nodes[index];
-        int shortestDistance = clusterMap.getDistance(writer, shortestNode);
-        int shortestIndex = index;
-        for(int i=index+1; i<nodes.length; i++) {
-          DatanodeDescriptor currentNode = nodes[i];
-          int currentDistance = clusterMap.getDistance(writer, currentNode);
-          if (shortestDistance>currentDistance) {
-            shortestDistance = currentDistance;
-            shortestNode = currentNode;
-            shortestIndex = i;
+        
+        // start DAN edit
+        if (!clusterMap.contains(shortestNode)) {
+          LOG.warn("DAN: cluster does not contains node : "+shortestNode);
+        }else{
+        // end DAN edit
+
+          int shortestDistance = clusterMap.getDistance(writer, shortestNode);
+          int shortestIndex = index;
+          for(int i=index+1; i<nodes.length; i++) {
+            DatanodeDescriptor currentNode = nodes[i];
+            int currentDistance = clusterMap.getDistance(writer, currentNode);
+            if (shortestDistance>currentDistance) {
+              shortestDistance = currentDistance;
+              shortestNode = currentNode;
+              shortestIndex = i;
+            }
           }
+          //switch position index & shortestIndex
+          if (index != shortestIndex) {
+            nodes[shortestIndex] = nodes[index];
+            nodes[index] = shortestNode;
+          }
+          writer = shortestNode;
+
+        // start DAN edit
         }
-        //switch position index & shortestIndex
-        if (index != shortestIndex) {
-          nodes[shortestIndex] = nodes[index];
-          nodes[index] = shortestNode;
-        }
-        writer = shortestNode;
+        // end DAN edit
       }
     }
     return nodes;
