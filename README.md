@@ -10,6 +10,7 @@
 
 	git pull ucare-github-dan master
 	vim runbench.sh
+	git checkout runbench.sh
 
 	The config is in echo $HADOOP_CONF_DIR directory
 	cd /proj/ucare/git/hadoop-ucare/psbin/ucare_se_conf/hadoop-etc/hadoop-2.7.1
