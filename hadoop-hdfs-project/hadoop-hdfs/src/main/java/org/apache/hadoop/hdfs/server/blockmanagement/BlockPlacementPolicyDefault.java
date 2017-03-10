@@ -507,20 +507,33 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
         
         // start DAN edit
         if (!clusterMap.contains(shortestNode)) {
-          LOG.warn("DAN: cluster does not contains node : "+shortestNode);
+          LOG.warn("DAN: cluster does not contains shortestNode : "+shortestNode);
         }else{
         // end DAN edit
+          LOG.warn("DAN: shortestNode ( "+shortestNode+" ) is in the cluster ");
 
           int shortestDistance = clusterMap.getDistance(writer, shortestNode);
           int shortestIndex = index;
           for(int i=index+1; i<nodes.length; i++) {
             DatanodeDescriptor currentNode = nodes[i];
-            int currentDistance = clusterMap.getDistance(writer, currentNode);
-            if (shortestDistance>currentDistance) {
-              shortestDistance = currentDistance;
-              shortestNode = currentNode;
-              shortestIndex = i;
+
+            // start DAN edit
+            if (!clusterMap.contains(currentNode)) {
+              LOG.warn("DAN: cluster does not contains currentNode : "+currentNode);
+            }else{
+            // end DAN edit
+
+              int currentDistance = clusterMap.getDistance(writer, currentNode);
+              if (shortestDistance>currentDistance) {
+                shortestDistance = currentDistance;
+                shortestNode = currentNode;
+                shortestIndex = i;
+              }
+
+            // start DAN edit
             }
+            // end DAN edit
+            
           }
           //switch position index & shortestIndex
           if (index != shortestIndex) {
