@@ -379,6 +379,7 @@ public class NetworkTopology {
     if (node == null) return false;
 
     // start DAN edit
+    LOG.info("DAN: contains is called in NetworkTopology");
     return true;
     // end DAN edit
     
