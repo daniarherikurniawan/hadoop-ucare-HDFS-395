@@ -19,4 +19,4 @@ cd ../../
 
 java -cp $CLASSPATH -Dproc_namenode -Xmx1000m -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/tmp/hadoop-ucare/logs/hadoop -Dhadoop.log.file=hadoop.log -Dhadoop.id.str=riza -Dhadoop.root.logger=INFO,console org.apache.hadoop.hdfs.server.namenode.NameNode -format
  
-java -cp $CLASSPATH -Djava.net.preferIPv4Stack=true org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark -op blockReport -datanodes 1024 -reports 1 -blocksPerReport 20000 -blocksPerFile 1000
+java -cp $CLASSPATH -Djava.net.preferIPv4Stack=true org.apache.hadoop.hdfs.server.namenode.NNThroughputBenchmark -op blockReport -datanodes 1024 -reports 1 -blocksPerReport 20000 -blocksPerFile 1
