@@ -495,7 +495,7 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
                                            DatanodeDescriptor writer,
                                            DatanodeDescriptor[] nodes) {
     if (nodes.length==0) return nodes;
-      LOG.warn("DAN: Use getPipeline in this file 1 ");
+      // LOG.warn("DAN: Use getPipeline in this file 1 ");
       
     synchronized(clusterMap) {
       int index=0;
@@ -510,7 +510,7 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
         }else{
         // end DAN edit
           DatanodeDescriptor shortestNode = nodes[index];
-          LOG.warn("DAN: shortestNode ( "+shortestNode+" ) is in the cluster ");
+          // LOG.warn("DAN: shortestNode ( "+shortestNode+" ) is in the cluster ");
 
           int shortestDistance = clusterMap.getDistance(writer, shortestNode);
           int shortestIndex = index;

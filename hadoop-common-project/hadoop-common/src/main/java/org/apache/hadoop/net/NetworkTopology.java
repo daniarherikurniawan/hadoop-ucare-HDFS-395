@@ -379,22 +379,22 @@ public class NetworkTopology {
     if (node == null) return false;
 
     // start DAN edit
-    LOG.warn("DAN: contains is called in NetworkTopology");
-    return true;
+    // LOG.warn("DAN: contains is called in NetworkTopology");
+    // return true;
     // end DAN edit
     
-    // netlock.readLock().lock();
-    // try {
-    //   Node parent = node.getParent();
-    //   for(int level=node.getLevel(); parent!=null&&level>0;
-    //       parent=parent.getParent(), level--) {
-    //     if (parent == clusterMap)
-    //       return true;
-    //   }
-    // } finally {
-    //   netlock.readLock().unlock();
-    // }
-    // return false; 
+    netlock.readLock().lock();
+    try {
+      Node parent = node.getParent();
+      for(int level=node.getLevel(); parent!=null&&level>0;
+          parent=parent.getParent(), level--) {
+        if (parent == clusterMap)
+          return true;
+      }
+    } finally {
+      netlock.readLock().unlock();
+    }
+    return false; 
   }
     
   /** Given a string representation of a node, return its reference
