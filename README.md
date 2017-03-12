@@ -8,9 +8,9 @@
 	cd /mnt/extra/hadoop/
 	./runbench.sh
 
+	git checkout runbench.sh
 	git pull ucare-github-dan master
 	vim runbench.sh
-	git checkout runbench.sh
 
 	The config is in echo $HADOOP_CONF_DIR directory
 	cd /proj/ucare/git/hadoop-ucare/psbin/ucare_se_conf/hadoop-etc/hadoop-2.7.1
@@ -113,7 +113,17 @@ main()
 [2/26/17, 10:36:26 PM] Riza Suminto: Can you add log to print size of each list resulted from reportDiff?
 
 
+edited:
+- NetworkTopology (contain)
+- 
+
 17000
 19000
 
 1574027
+
+6382
+7273
+8335
+9572
+12237
