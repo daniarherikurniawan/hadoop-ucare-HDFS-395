@@ -14,6 +14,9 @@
 
 	The config is in echo $HADOOP_CONF_DIR directory
 	cd /proj/ucare/git/hadoop-ucare/psbin/ucare_se_conf/hadoop-etc/hadoop-2.7.1
+
+	cloning repo:
+	git clone -b ucare-HDFS-395 --single-branch https://github.com/ucare-uchicago/hadoop.git
 ```
 
 
@@ -130,3 +133,6 @@ edited:
 
 27500
 27000
+
+56000
+55000
