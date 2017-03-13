@@ -137,7 +137,14 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
     if (!clusterMap.contains(writer)) {
       writer=null;
     }
-      
+    LOG.warn("DAN: numOfReplicas =  "+numOfReplicas);
+    LOG.warn("DAN: writer =  "+writer);
+    LOG.warn("DAN: excludedNodes =  "+excludedNodes);
+    LOG.warn("DAN: blocksize =  "+blocksize);
+    LOG.warn("DAN: maxNodesPerRack =  "+maxNodesPerRack);
+    LOG.warn("DAN: results =  "+results);
+
+    
     DatanodeDescriptor localNode = chooseTarget(numOfReplicas, writer, 
                                                 excludedNodes, blocksize, maxNodesPerRack, results);
     if (!returnChosenNodes) {  
@@ -509,6 +516,9 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
         // start DAN edit
         if (!clusterMap.contains(nodes[index])) {
           LOG.warn("DAN: cluster does not contains shortestNode (nodes[ "+index+" ]) : "+nodes[index]);
+
+          // this target nodes are not indetified , just skip all of it
+          index = nodes.length;
         }else{
         // end DAN edit
           DatanodeDescriptor shortestNode = nodes[index];
