@@ -211,7 +211,7 @@ public class NNThroughputBenchmark {
     OperationStatsBase() {
       baseDir = BASE_DIR_NAME + "/" + getOpName();
       LOG.info("DAN : change number replication to 6 ");
-      config.setInt(DFSConfigKeys.DFS_REPLICATION_KEY, 16);
+      config.setInt(DFSConfigKeys.DFS_REPLICATION_KEY, 6);
 
       /*DAN: replication default 3*/
       replication = (short) config.getInt(DFSConfigKeys.DFS_REPLICATION_KEY, 3);
@@ -219,7 +219,7 @@ public class NNThroughputBenchmark {
       numOpsRequired = 10;
 
       /*DAN: numThreads default 3*/
-      numThreads = 12; 
+      numThreads = 6; 
 
       logLevel = Level.ERROR;
       ugcRefreshCount = Long.MAX_VALUE;
