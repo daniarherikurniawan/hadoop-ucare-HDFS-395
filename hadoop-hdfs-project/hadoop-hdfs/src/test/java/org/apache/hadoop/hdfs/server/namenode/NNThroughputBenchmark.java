@@ -157,7 +157,7 @@ public class NNThroughputBenchmark {
     protected long elapsedTime = 0;       // time from start to finish
     protected boolean keepResults = false;// don't clean base directory on exit
     protected Level logLevel;             // logging level, ERROR by default
-    protected int ugcRefreshCount = 0;    // user group cache refresh count
+    protected long ugcRefreshCount = 0;    // user group cache refresh count
 
     protected List<StatsDaemon> daemons;
 
