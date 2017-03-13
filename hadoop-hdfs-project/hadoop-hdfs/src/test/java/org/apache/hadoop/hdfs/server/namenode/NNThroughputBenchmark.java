@@ -1006,17 +1006,17 @@ public class NNThroughputBenchmark {
       for(int idx=0; idx < nrFiles; idx++) {
           LOG.info("DAN: idx = "+idx);
 
-        // if( (idx+1) % 1000 == 0){
-        //   LOG.info("DAN: DELAY ");
-        //   try 
-        //   {
-        //       Thread.sleep(1000);
-        //   } 
-        //   catch(InterruptedException e)
-        //   {
-        //        Thread.currentThread().interrupt();
-        //   }
-        // }
+        if( (idx+1) % 1000 == 0){
+          LOG.info("DAN: DELAY ");
+          try 
+          {
+              Thread.sleep(1000);
+          } 
+          catch(InterruptedException e)
+          {
+               Thread.currentThread().interrupt();
+          }
+        }
 
         String fileName = nameGenerator.getNextFileName("ThroughputBench");
         nameNode.create(fileName, FsPermission.getDefault(), clientName,
