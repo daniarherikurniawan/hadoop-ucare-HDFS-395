@@ -137,11 +137,14 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
     if (!clusterMap.contains(writer)) {
       writer=null;
     }
+    LOG.warn("DAN: clusterSize =  "+clusterSize);
+    LOG.warn("DAN: totalNumOfReplicas =  "+totalNumOfReplicas);
     LOG.warn("DAN: numOfReplicas =  "+numOfReplicas);
     LOG.warn("DAN: writer =  "+writer);
     LOG.warn("DAN: excludedNodes =  "+excludedNodes);
     LOG.warn("DAN: blocksize =  "+blocksize);
     LOG.warn("DAN: maxNodesPerRack =  "+maxNodesPerRack);
+    LOG.warn("DAN: clusterMap.getNumOfRacks() =  "+clusterMap.getNumOfRacks());
     LOG.warn("DAN: results =  "+results);
 
     

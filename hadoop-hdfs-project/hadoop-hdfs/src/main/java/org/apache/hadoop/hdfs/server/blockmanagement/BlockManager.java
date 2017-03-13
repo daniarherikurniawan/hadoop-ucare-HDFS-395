@@ -1070,6 +1070,8 @@ public class BlockManager {
     // choose replication targets: NOT HOLDING THE GLOBAL LOCK
     // It is costly to extract the filename for which chooseTargets is called,
     // so for now we pass in the Inode itself.
+    LOG.warn("DAN: .chooseTarget is called at BlockManager ");
+
     DatanodeDescriptor targets[] = 
                        blockplacement.chooseTarget(fileINode, additionalReplRequired,
                        srcNode, liveReplicaNodes, excludedNodes, block.getNumBytes());
@@ -1171,6 +1173,8 @@ public class BlockManager {
       final HashMap<Node, Node> excludedNodes,
       final long blocksize) throws IOException {
     // choose targets for the new block to be allocated.
+    LOG.warn("DAN: .chooseTarget is called at BlockManager with IOException ");
+
     final DatanodeDescriptor targets[] = blockplacement.chooseTarget(
         src, numOfReplicas, client, excludedNodes, blocksize);
     if (targets.length < minReplication) {
