@@ -503,6 +503,7 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
         writer = nodes[0];
       }
       for(;index<nodes.length; index++) {
+        LOG.warn("DAN: index = "+index);
         
         // start DAN edit
         if (!clusterMap.contains(nodes[index])) {
