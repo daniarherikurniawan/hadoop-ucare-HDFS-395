@@ -156,7 +156,7 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
     }
       
     // sorting nodes to form a pipeline
-    LOG.warn("DAN: results.size() =  "+results.size());
+    // LOG.warn("DAN: results.size() =  "+results.size());
     return getPipeline((writer==null)?localNode:writer,
                        results.toArray(new DatanodeDescriptor[results.size()]));
   }

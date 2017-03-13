@@ -860,8 +860,9 @@ public class NNThroughputBenchmark {
       
       blocks.add(blk);
       nrBlocks++;
-
-      // LOG.info("nrBlocks = " + nrBlocks);
+      if (nrBlocks % 500 == 0){
+        LOG.info("nrBlocks = " + nrBlocks);
+      }
       return true;
     }
 

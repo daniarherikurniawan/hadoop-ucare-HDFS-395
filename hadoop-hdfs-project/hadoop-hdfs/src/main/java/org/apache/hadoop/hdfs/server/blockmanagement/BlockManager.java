@@ -1187,8 +1187,8 @@ public class BlockManager {
       final HashMap<Node, Node> excludedNodes,
       final long blocksize) throws IOException {
     // choose targets for the new block to be allocated.
-    LOG.warn("");
-    LOG.warn("DAN: .chooseTarget is called at BlockManager with IOException ");
+    // LOG.warn("");
+    // LOG.warn("DAN: .chooseTarget is called at BlockManager with IOException ");
 
     final DatanodeDescriptor targets[] = blockplacement.chooseTarget(
         src, numOfReplicas, client, excludedNodes, blocksize);
