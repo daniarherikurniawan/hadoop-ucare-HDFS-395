@@ -211,13 +211,14 @@ public class NNThroughputBenchmark {
     OperationStatsBase() {
       baseDir = BASE_DIR_NAME + "/" + getOpName();
       LOG.info("DAN : change number replication to 6 ");
+      config.setInt(DFSConfigKeys.DFS_REPLICATION_KEY, 6);
 
       /*DAN: replication default 3*/
-      replication = (short) config.getInt(DFSConfigKeys.DFS_REPLICATION_KEY, 6);
+      replication = (short) config.getInt(DFSConfigKeys.DFS_REPLICATION_KEY, 3);
 
       numOpsRequired = 10;
 
-      /*DAN: replication default 3*/
+      /*DAN: numThreads default 3*/
       numThreads = 6; 
 
       logLevel = Level.ERROR;
