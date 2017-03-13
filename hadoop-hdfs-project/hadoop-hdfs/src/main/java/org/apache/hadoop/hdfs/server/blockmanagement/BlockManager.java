@@ -1034,6 +1034,7 @@ public class BlockManager {
 
         assert liveReplicaNodes.size() == numReplicas.liveReplicas();
         // do not schedule more if enough replicas is already pending
+
         numEffectiveReplicas = numReplicas.liveReplicas() +
                                 pendingReplications.getNumReplicas(block);
       
@@ -1049,6 +1050,12 @@ public class BlockManager {
           }
         }
 
+        LOG.warn("DAN: liveReplicaNodes.size() "+liveReplicaNodes.size());
+        LOG.warn("DAN: numReplicas.liveReplicas() "+numReplicas.liveReplicas());
+        LOG.warn("DAN: pendingReplications.getNumReplicas(block) "+pendingReplications.getNumReplicas(block));
+        LOG.warn("DAN: numEffectiveReplicas "+numEffectiveReplicas);
+        LOG.warn("DAN: requiredReplication "+requiredReplication);
+        
         if (numReplicas.liveReplicas() < requiredReplication) {
           additionalReplRequired = requiredReplication - numEffectiveReplicas;
         } else {
@@ -1070,6 +1077,8 @@ public class BlockManager {
     // choose replication targets: NOT HOLDING THE GLOBAL LOCK
     // It is costly to extract the filename for which chooseTargets is called,
     // so for now we pass in the Inode itself.
+    LOG.warn("DAN: containingNodes "+containingNodes);
+
     LOG.warn("DAN: .chooseTarget is called at BlockManager ");
 
     DatanodeDescriptor targets[] = 
@@ -1173,6 +1182,7 @@ public class BlockManager {
       final HashMap<Node, Node> excludedNodes,
       final long blocksize) throws IOException {
     // choose targets for the new block to be allocated.
+    LOG.warn("");
     LOG.warn("DAN: .chooseTarget is called at BlockManager with IOException ");
 
     final DatanodeDescriptor targets[] = blockplacement.chooseTarget(
