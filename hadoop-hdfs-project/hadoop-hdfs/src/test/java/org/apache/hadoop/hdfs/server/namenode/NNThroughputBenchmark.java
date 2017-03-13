@@ -210,21 +210,28 @@ public class NNThroughputBenchmark {
 
     OperationStatsBase() {
       baseDir = BASE_DIR_NAME + "/" + getOpName();
-      replication = (short) config.getInt(DFSConfigKeys.DFS_REPLICATION_KEY, 3);
+      LOG.info("DAN : change number replication to 6 ");
+
+      /*DAN: replication default 3*/
+      replication = (short) config.getInt(DFSConfigKeys.DFS_REPLICATION_KEY, 6);
+
       numOpsRequired = 10;
-      numThreads = 3;
+
+      /*DAN: replication default 3*/
+      numThreads = 6; 
+
       logLevel = Level.ERROR;
-      ugcRefreshCount = Integer.MAX_VALUE;
+      ugcRefreshCount = Long.MAX_VALUE;
     }
 
     void benchmark() throws IOException {
-      LOG.info("Daniar 1 : numThreads "+numThreads);
+      LOG.info("DAN 1 : numThreads "+numThreads);
       daemons = new ArrayList<StatsDaemon>();
       long start = 0;
       int curNumThread = 1;
       try {
 
-        LOG.info("Daniar 2 : numThreads "+numThreads);
+        LOG.info("DAN 2 : numThreads "+numThreads);
         numOpsExecuted = 0;
         cumulativeTime = 0;
         if(numThreads < 1)
@@ -239,7 +246,7 @@ public class NNThroughputBenchmark {
             opsPerThread[tIdx] = 1;
         }
 
-        LOG.info("Daniar 3 : numThreads "+numThreads);
+        LOG.info("DAN 3 : numThreads "+numThreads);
         // if numThreads > numOpsRequired then the remaining threads will do nothing
         for(; tIdx < numThreads; tIdx++)
           opsPerThread[tIdx] = 0;
@@ -247,7 +254,7 @@ public class NNThroughputBenchmark {
         generateInputs(opsPerThread);
 	      setNameNodeLoggingLevel(logLevel);
 
-        LOG.info("Daniar 4 : numThreads "+numThreads);
+        LOG.info("DAN 4 : numThreads "+numThreads);
         while (curNumThread <= numThreads) {
           numOpsExecuted = 0;
           cumulativeTime = 0;
