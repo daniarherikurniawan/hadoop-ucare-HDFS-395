@@ -138,7 +138,7 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
       writer=null;
     }
     // LOG.warn("DAN: chosenNodes        =  "+chosenNodes);
-    LOG.warn("DAN: clusterSize        =  "+clusterSize);
+    // LOG.warn("DAN: clusterSize        =  "+clusterSize);
     // LOG.warn("DAN: totalNumOfReplicas =  "+totalNumOfReplicas);
     // LOG.warn("DAN: numOfReplicas      =  "+numOfReplicas);
     // LOG.warn("DAN: writer             =  "+writer);
