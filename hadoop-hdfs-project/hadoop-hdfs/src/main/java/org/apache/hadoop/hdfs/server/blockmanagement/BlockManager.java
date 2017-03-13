@@ -920,6 +920,8 @@ public class BlockManager {
     // Choose the blocks to be replicated
     List<List<Block>> blocksToReplicate =
       chooseUnderReplicatedBlocks(blocksToProcess);
+    LOG.warn("DAN: called computeReplicationWorkForBlock at computeReplicationWork");
+    LOG.warn("DAN: blocksToReplicate.size()   = "+blocksToReplicate.size());
 
     // replicate blocks
     int scheduledReplicationCount = 0;
@@ -1009,6 +1011,8 @@ public class BlockManager {
     INodeFile fileINode = null;
     int additionalReplRequired;
 
+    LOG.warn("DAN: .chooseTarget is called at BlockManager computeReplicationWorkForBlock");
+
     namesystem.writeLock();
     try {
       synchronized (neededReplications) {
@@ -1050,12 +1054,13 @@ public class BlockManager {
           }
         }
 
-        LOG.warn("DAN: liveReplicaNodes.size() "+liveReplicaNodes.size());
-        LOG.warn("DAN: numReplicas.liveReplicas() "+numReplicas.liveReplicas());
-        LOG.warn("DAN: pendingReplications.getNumReplicas(block) "+pendingReplications.getNumReplicas(block));
-        LOG.warn("DAN: numEffectiveReplicas "+numEffectiveReplicas);
-        LOG.warn("DAN: requiredReplication "+requiredReplication);
-        
+        LOG.warn("DAN: liveReplicaNodes.size()                  = "+liveReplicaNodes.size());
+        LOG.warn("DAN: numReplicas.liveReplicas()               = "+numReplicas.liveReplicas());
+        LOG.warn("DAN: block                                    = "+block);
+        LOG.warn("DAN: pendingReplications.getNumReplicas(block)= "+pendingReplications.getNumReplicas(block));
+        LOG.warn("DAN: numEffectiveReplicas                     = "+numEffectiveReplicas);
+        LOG.warn("DAN: requiredReplication                      = "+requiredReplication);
+
         if (numReplicas.liveReplicas() < requiredReplication) {
           additionalReplRequired = requiredReplication - numEffectiveReplicas;
         } else {
@@ -1077,9 +1082,9 @@ public class BlockManager {
     // choose replication targets: NOT HOLDING THE GLOBAL LOCK
     // It is costly to extract the filename for which chooseTargets is called,
     // so for now we pass in the Inode itself.
-    LOG.warn("DAN: containingNodes "+containingNodes);
 
-    LOG.warn("DAN: .chooseTarget is called at BlockManager ");
+    LOG.warn("DAN: containingNodes                          = "+containingNodes);
+
 
     DatanodeDescriptor targets[] = 
                        blockplacement.chooseTarget(fileINode, additionalReplRequired,
