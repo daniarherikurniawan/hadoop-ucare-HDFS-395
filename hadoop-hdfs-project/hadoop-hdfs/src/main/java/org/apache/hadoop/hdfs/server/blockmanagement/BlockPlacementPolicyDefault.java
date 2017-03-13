@@ -506,7 +506,7 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
         
         // start DAN edit
         if (!clusterMap.contains(nodes[index])) {
-          LOG.warn("DAN: cluster does not contains shortestNode (nodes[index]) : "+nodes[index]);
+          LOG.warn("DAN: cluster does not contains shortestNode (nodes[ "+index+" ]) : "+nodes[index]);
         }else{
         // end DAN edit
           DatanodeDescriptor shortestNode = nodes[index];
@@ -519,7 +519,7 @@ public class BlockPlacementPolicyDefault extends BlockPlacementPolicy {
 
             // start DAN edit
             if (!clusterMap.contains(currentNode)) {
-              LOG.warn("DAN: cluster does not contains currentNode : "+currentNode);
+              LOG.warn("DAN: cluster does not contains currentNode (nodes[ "+i+" ]) : "+currentNode);
             }else{
             // end DAN edit
 
