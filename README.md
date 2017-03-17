@@ -4,19 +4,26 @@
  	vim	/proj/ucare/git/hadoop-ucare/psbin/mini-slaves
 
  	cd /proj/ucare/riza/start_script/
-	./setup-HDFS-395-DAN.sh
+	./setup-HDFS-395.sh
 	cd /mnt/extra/hadoop/
 	./runbench.sh
 
 	git checkout runbench.sh
-	git pull ucare-github-dan master
+	git pull ucare-github master
 	vim runbench.sh
 
 	The config is in echo $HADOOP_CONF_DIR directory
 	cd /proj/ucare/git/hadoop-ucare/psbin/ucare_se_conf/hadoop-etc/hadoop-2.7.1
 
+	fork dulu dari main reponya 
+
 	cloning repo:
-	git clone -b ucare-HDFS-395 --single-branch https://github.com/ucare-uchicago/hadoop.git
+	git clone -b ucare-HDFS-395 --single-branch https://github.com/daniarherikurniawan/hadoop.git
+
+	git checkout -b ucare-HDFS-395-DAN
+	git push --set-upstream origin ucare-HDFS-395-DAN
+
+	find . -name "*.DS_Store" -type f -delete
 ```
 
 
