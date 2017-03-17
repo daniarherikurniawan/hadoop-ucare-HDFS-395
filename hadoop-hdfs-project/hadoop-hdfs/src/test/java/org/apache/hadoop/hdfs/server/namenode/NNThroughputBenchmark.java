@@ -1054,11 +1054,11 @@ public class NNThroughputBenchmark {
           //LOG.info("Placing block "+dnInfo+" to datanode "+dnIdx);
           // DAN: slow down the block adding
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
-          // nameNode.blockReceived(
-          //     datanodes[dnIdx].dnRegistration, 
-          //     loc.getBlock().getBlockPoolId(),
-          //     new Block[] {loc.getBlock().getLocalBlock()},
-          //     new String[] {""});
+          nameNode.blockReceived(
+              datanodes[dnIdx].dnRegistration, 
+              loc.getBlock().getBlockPoolId(),
+              new Block[] {loc.getBlock().getLocalBlock()},
+              new String[] {""});
         }
       }
       return prevBlock;
