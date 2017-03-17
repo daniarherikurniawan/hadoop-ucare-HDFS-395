@@ -72,17 +72,24 @@ plot  'elapsed_time_2.dat' using (log($1)):2:xtic(1)
 
 
 reset
+set term postscript eps enhanced "Arial" 24
+set output 'example.eps'
+
+
 set title 'Elapsed Time per # Datanode Emulated'
 set ylabel "Elapsed Time (ms)"
 set xlabel "Number of Datanode"
 set grid
 set style data linespoints
-plot  'elapsed_time_2.dat' using (log($1)):2:xtic(1) title   '1k blocks'  with lines, \
-	  'elapsed_time_2.dat' using (log($1)):3:xtic(1) title   '2k blocks'  with lines, \
-	  'elapsed_time_2.dat' using (log($1)):4:xtic(1) title   '3k blocks'  with lines, \
-	  'elapsed_time_2.dat' using (log($1)):5:xtic(1) title   '4k blocks' with lines
+plot  'elapsed_time_2.dat' using (log($1)):2:xtic(1) title   '6k blocks'  with lines, \
+    'elapsed_time_2.dat' using (log($1)):3:xtic(1) title   '10k blocks'  with lines, \
+    'elapsed_time_2.dat' using (log($1)):4:xtic(1) title   '14k blocks'  with lines, \
+    'elapsed_time_2.dat' using (log($1)):5:xtic(1) title   '20k blocks'  with lines, \
+	  'elapsed_time_2.dat' using (log($1)):6:xtic(1) title   '30k blocks'  with lines, \
+	  'elapsed_time_2.dat' using (log($1)):7:xtic(1) title   '40k blocks'  with lines, \
+	  'elapsed_time_2.dat' using (log($1)):8:xtic(1) title   '50k blocks' with lines
 
-
+replot
 
 Ops per sec
 1		100.0

@@ -920,10 +920,10 @@ public class NNThroughputBenchmark {
           receivedDNReg.setStorageInfo(
                           new DataStorage(nsInfo, dnInfo.getStorageID()));
           receivedDNReg.setInfoPort(dnInfo.getInfoPort());
-          nameNode.blockReceived( receivedDNReg, 
-                                  nameNode.getNamesystem().getBlockPoolId(),
-                                  new Block[] {blocks[i]},
-                                  new String[] {DataNode.EMPTY_DEL_HINT});
+          // nameNode.blockReceived( receivedDNReg, 
+                                  // nameNode.getNamesystem().getBlockPoolId(),
+                                  // new Block[] {blocks[i]},
+                                  // new String[] {DataNode.EMPTY_DEL_HINT});
         }
       }
       return blocks.length;
@@ -1054,11 +1054,11 @@ public class NNThroughputBenchmark {
           //LOG.info("Placing block "+dnInfo+" to datanode "+dnIdx);
           // DAN: slow down the block adding
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
-          nameNode.blockReceived(
-              datanodes[dnIdx].dnRegistration, 
-              loc.getBlock().getBlockPoolId(),
-              new Block[] {loc.getBlock().getLocalBlock()},
-              new String[] {""});
+          // nameNode.blockReceived(
+          //     datanodes[dnIdx].dnRegistration, 
+          //     loc.getBlock().getBlockPoolId(),
+          //     new Block[] {loc.getBlock().getLocalBlock()},
+          //     new String[] {""});
         }
       }
       return prevBlock;
