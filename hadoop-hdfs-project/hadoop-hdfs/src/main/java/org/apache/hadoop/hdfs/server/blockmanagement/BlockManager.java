@@ -1539,7 +1539,8 @@ public class BlockManager {
       final Collection<StatefulBlockInfo> toUC) {
     LOG.info("DAN: at processReportedBlock");
     
-    if(LOG.isDebugEnabled()) {
+    // LOG.isDebugEnabled()
+    if(true) {
       LOG.debug("Reported block " + block
           + " on " + dn.getName() + " size " + block.getNumBytes()
           + " replicaState = " + reportedState);
@@ -1557,7 +1558,8 @@ public class BlockManager {
     BlockUCState ucState = storedBlock.getBlockUCState();
     
     // Block is on the NN
-    if(LOG.isDebugEnabled()) {
+    // LOG.isDebugEnabled()
+    if(true) {
       LOG.debug("In memory blockUCState = " + ucState);
     }
 
