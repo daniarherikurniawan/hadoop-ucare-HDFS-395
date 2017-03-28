@@ -922,10 +922,10 @@ public class NNThroughputBenchmark {
           receivedDNReg.setStorageInfo(
                           new DataStorage(nsInfo, dnInfo.getStorageID()));
           receivedDNReg.setInfoPort(dnInfo.getInfoPort());
-          nameNode.blockReceived( receivedDNReg, 
-                                  nameNode.getNamesystem().getBlockPoolId(),
-                                  new Block[] {blocks[i]},
-                                  new String[] {DataNode.EMPTY_DEL_HINT});
+          // nameNode.blockReceived( receivedDNReg, 
+          //                         nameNode.getNamesystem().getBlockPoolId(),
+          //                         new Block[] {blocks[i]},
+          //                         new String[] {DataNode.EMPTY_DEL_HINT});
         }
       }
       return blocks.length;

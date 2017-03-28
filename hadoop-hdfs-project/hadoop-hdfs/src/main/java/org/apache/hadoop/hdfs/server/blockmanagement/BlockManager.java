@@ -1466,11 +1466,11 @@ public class BlockManager {
     // that have been reported from those that have not
     LOG.info("DAN: begin at reportDiff called inside processReport");
 
-    LOG.info("Size of toAdd        : "+toAdd.size());
-    LOG.info("Size of toRemove     : "+toRemove.size());
-    LOG.info("Size of toInvalidate : "+toInvalidate.size());
-    LOG.info("Size of toCorrupt    : "+toCorrupt.size());
-    LOG.info("Size of toUC         : "+toUC.size());
+    LOG.info("  Size of toAdd        : "+toAdd.size());
+    LOG.info("  Size of toRemove     : "+toRemove.size());
+    LOG.info("  Size of toInvalidate : "+toInvalidate.size());
+    LOG.info("  Size of toCorrupt    : "+toCorrupt.size());
+    LOG.info("  Size of toUC         : "+toUC.size());
 
     BlockInfo delimiter = new BlockInfo(new Block(), 1);
     boolean added = dn.addBlock(delimiter);
@@ -1484,8 +1484,18 @@ public class BlockManager {
 
       Block iblk = itBR.next();
       ReplicaState iState = itBR.getCurrentReplicaState();
+      LOG.info("DAN: at reportDiff before processReportedBlock should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+
       BlockInfo storedBlock = processReportedBlock(dn, iblk, iState,
                                   toAdd, toInvalidate, toCorrupt, toUC);
+
+      LOG.info("    Size of toAdd        : "+toAdd.size());
+      LOG.info("    Size of toRemove     : "+toRemove.size());
+      LOG.info("    Size of toInvalidate : "+toInvalidate.size());
+      LOG.info("    Size of toCorrupt    : "+toCorrupt.size());
+      LOG.info("    Size of toUC         : "+toUC.size());
+      LOG.info("DAN: at reportDiff after processReportedBlock should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+
       // move block to the head of the list
       if(storedBlock != null && storedBlock.findDatanode(dn) >= 0)
         dn.moveBlockToHead(storedBlock);
@@ -2152,7 +2162,7 @@ public class BlockManager {
     Collection<Block> toInvalidate = new LinkedList<Block>();
     Collection<BlockInfo> toCorrupt = new LinkedList<BlockInfo>();
     Collection<StatefulBlockInfo> toUC = new LinkedList<StatefulBlockInfo>();
-    LOG.info("DAN: after processReportedBlock should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+    LOG.info("DAN: before processReportedBlock should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
     processReportedBlock(node, block, ReplicaState.FINALIZED,
                               toAdd, toInvalidate, toCorrupt, toUC);
