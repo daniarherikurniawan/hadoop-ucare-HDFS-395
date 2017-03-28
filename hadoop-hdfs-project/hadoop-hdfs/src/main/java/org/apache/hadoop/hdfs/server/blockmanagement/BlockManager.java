@@ -1541,7 +1541,7 @@ public class BlockManager {
     
     // LOG.isDebugEnabled()
     if(true) {
-      LOG.debug("Reported block " + block
+      LOG.info("DAN: Reported block " + block
           + " on " + dn.getName() + " size " + block.getNumBytes()
           + " replicaState = " + reportedState);
     }
@@ -1560,7 +1560,7 @@ public class BlockManager {
     // Block is on the NN
     // LOG.isDebugEnabled()
     if(true) {
-      LOG.debug("In memory blockUCState = " + ucState);
+      LOG.info("DAN: In memory blockUCState = " + ucState);
     }
 
     // Ignore replicas already scheduled to be removed from the DN
