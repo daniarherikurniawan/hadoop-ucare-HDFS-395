@@ -1328,7 +1328,7 @@ public class BlockManager {
   public void processReport(final DatanodeID nodeID, final String poolId,
       final BlockListAsLongs newReport) throws IOException {
     namesystem.writeLock();
-    LOG.info("DAN: at processReport nodeID = "+ nodeID);
+    LOG.info("DAN: at BlockManager starting processReport");
 
     final long startTime = Util.now(); //after acquiring write lock
     final long endTime;
@@ -1464,6 +1464,7 @@ public class BlockManager {
       Collection<StatefulBlockInfo> toUC) { // add to under-construction list
     // place a delimiter in the list which separates blocks 
     // that have been reported from those that have not
+    LOG.info("DAN: begin at reportDiff called inside processReport");
     BlockInfo delimiter = new BlockInfo(new Block(), 1);
     boolean added = dn.addBlock(delimiter);
     assert added : "Delimiting block cannot be present in the node";
@@ -1487,6 +1488,8 @@ public class BlockManager {
     while(it.hasNext())
       toRemove.add(it.next());
     dn.removeBlock(delimiter);
+    LOG.info("DAN: end at reportDiff called inside processReport");
+
   }
 
   /**
