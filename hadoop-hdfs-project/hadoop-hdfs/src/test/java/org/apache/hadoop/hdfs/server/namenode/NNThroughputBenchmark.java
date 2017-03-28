@@ -266,6 +266,7 @@ public class NNThroughputBenchmark {
               daemons.add(new StatsDaemon(tIdx, opsPerThread[tIdx], this));
 
             start = System.currentTimeMillis();
+            // DAN: important 4 starting to send block reports
             LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
             for(nIdx=0; nIdx < curNumThread; nIdx++)
               daemons.get(nIdx).start();
@@ -921,10 +922,10 @@ public class NNThroughputBenchmark {
           receivedDNReg.setStorageInfo(
                           new DataStorage(nsInfo, dnInfo.getStorageID()));
           receivedDNReg.setInfoPort(dnInfo.getInfoPort());
-          // nameNode.blockReceived( receivedDNReg, 
-          //                         nameNode.getNamesystem().getBlockPoolId(),
-          //                         new Block[] {blocks[i]},
-          //                         new String[] {DataNode.EMPTY_DEL_HINT});
+          nameNode.blockReceived( receivedDNReg, 
+                                  nameNode.getNamesystem().getBlockPoolId(),
+                                  new Block[] {blocks[i]},
+                                  new String[] {DataNode.EMPTY_DEL_HINT});
         }
       }
       return blocks.length;
