@@ -1466,11 +1466,7 @@ public class BlockManager {
     // that have been reported from those that have not
     LOG.info("DAN: begin at reportDiff called inside processReport");
 
-    LOG.info("  Size of toAdd        : "+toAdd.size());
-    LOG.info("  Size of toRemove     : "+toRemove.size());
-    LOG.info("  Size of toInvalidate : "+toInvalidate.size());
-    LOG.info("  Size of toCorrupt    : "+toCorrupt.size());
-    LOG.info("  Size of toUC         : "+toUC.size());
+    LOG.info("  Size of toRemove#1     : "+toRemove.size());
 
     BlockInfo delimiter = new BlockInfo(new Block(), 1);
     boolean added = dn.addBlock(delimiter);
@@ -1489,11 +1485,7 @@ public class BlockManager {
       BlockInfo storedBlock = processReportedBlock(dn, iblk, iState,
                                   toAdd, toInvalidate, toCorrupt, toUC);
 
-      LOG.info("    Size of toAdd        : "+toAdd.size());
-      LOG.info("    Size of toRemove     : "+toRemove.size());
-      LOG.info("    Size of toInvalidate : "+toInvalidate.size());
-      LOG.info("    Size of toCorrupt    : "+toCorrupt.size());
-      LOG.info("    Size of toUC         : "+toUC.size());
+      LOG.info("    Size of toRemove#2     : "+toRemove.size());
       LOG.info("DAN: at reportDiff after processReportedBlock should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
       // move block to the head of the list
@@ -1507,6 +1499,7 @@ public class BlockManager {
     while(it.hasNext())
       toRemove.add(it.next());
     dn.removeBlock(delimiter);
+      LOG.info("    Size of toRemove#3     : "+toRemove.size());
     LOG.info("DAN: finished at reportDiff called inside processReport");
 
   }
