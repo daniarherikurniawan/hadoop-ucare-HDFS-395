@@ -1537,6 +1537,7 @@ public class BlockManager {
       final Collection<Block> toInvalidate, 
       final Collection<BlockInfo> toCorrupt,
       final Collection<StatefulBlockInfo> toUC) {
+    LOG.info("DAN: at processReportedBlock");
     
     if(LOG.isDebugEnabled()) {
       LOG.debug("Reported block " + block
