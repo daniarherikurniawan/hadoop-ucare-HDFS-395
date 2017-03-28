@@ -1479,8 +1479,8 @@ public class BlockManager {
       newReport = new BlockListAsLongs();
     // scan the report and process newly reported blocks
     BlockReportIterator itBR = newReport.getBlockReportIterator();
+    LOG.info("DAN: number of newly reported blocks = " + newReport.getNumberOfBlocks());
     while(itBR.hasNext()) {
-      LOG.info("DAN: found newly reported blocks");
 
       Block iblk = itBR.next();
       ReplicaState iState = itBR.getCurrentReplicaState();
