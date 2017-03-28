@@ -1537,7 +1537,7 @@ public class BlockManager {
       final Collection<Block> toInvalidate, 
       final Collection<BlockInfo> toCorrupt,
       final Collection<StatefulBlockInfo> toUC) {
-    LOG.info("DAN: at processReportedBlock");
+    // LOG.info("DAN: at processReportedBlock");
     
     if(LOG.isDebugEnabled()) {
       LOG.debug("Reported block " + block
@@ -2142,6 +2142,8 @@ public class BlockManager {
     Collection<StatefulBlockInfo> toUC = new LinkedList<StatefulBlockInfo>();
     processReportedBlock(node, block, ReplicaState.FINALIZED,
                               toAdd, toInvalidate, toCorrupt, toUC);
+    LOG.info("DAN: after processReportedBlock should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+
     // the block is only in one of the to-do lists
     // if it is in none then data-node already has it
     assert toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size() <= 1
