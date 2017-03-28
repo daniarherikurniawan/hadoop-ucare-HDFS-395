@@ -1546,6 +1546,8 @@ public class BlockManager {
           + " replicaState = " + reportedState);
     }
       LOG.info("  DAN: reportedState == ReplicaState.FINALIZED == " + (reportedState == ReplicaState.FINALIZED));
+      LOG.info("  DAN: storedBlock.findDatanode(dn) = " + storedBlock.findDatanode(dn) );
+      LOG.info("  DAN: storedBlock.findDatanode(dn) < 0 == " + (storedBlock.findDatanode(dn) < 0));
     
     // find block by blockId
     BlockInfo storedBlock = blocksMap.getStoredBlock(block);
