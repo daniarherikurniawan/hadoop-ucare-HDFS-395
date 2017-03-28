@@ -1976,11 +1976,316 @@ DAN 4 : numThreads 1024
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+not reporting block addition
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+AN 4 : numThreads 1024
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 1 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 105
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 9.523809523809524
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 104
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 2 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 27
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 37.03703703703704
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 27
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 4 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 17
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 58.8235294117647
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 17
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 8 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 10
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 100.0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 10
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 16 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 9
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 111.11111111111111
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 9
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 32 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 14
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 71.42857142857143
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 13
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 64 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 9
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 111.11111111111111
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 9
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 128 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 14
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 71.42857142857143
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 12
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 256 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 28
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 35.714285714285715
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 9
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- 512 datanodes  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Elapsed Time: 55
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark:  Ops per sec: 18.181818181818183
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Average Time: 10
+17/03/17 07:10:13 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:10:13 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:10:14 INFO namenode.NNThroughputBenchmark: --- 1024 datanodes  ---
+17/03/17 07:10:14 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:14 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:14 INFO namenode.NNThroughputBenchmark: Elapsed Time: 129
+17/03/17 07:10:14 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.751937984496124
+17/03/17 07:10:14 INFO namenode.NNThroughputBenchmark: Average Time: 11
+17/03/17 07:10:14 INFO namenode.NNThroughputBenchmark: Everything done!
+17/03/17 07:10:45 WARN blockmanagement.BlockManager: DAN: called computeReplicationWorkForBlock at computeReplicationWork
+17/03/17 07:10:45 WARN blockmanagement.BlockManager: DAN: blocksToReplicate.size()   = 5
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark:
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark: --- blockReport inputs ---
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark: reports = 1
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark: datanodes = 1024 (19778, 19958, 19980, 20000, 19830, 
+
+
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark: blocksPerReport = 20000
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1000
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark: Elapsed Time: 129
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.751937984496124
+17/03/17 07:10:45 INFO namenode.NNThroughputBenchmark: Average Time: 11
+17/03/17 07:10:45 INFO mortbay.log: Stopped SelectChannelConnector@0.0.0.0:50070
+
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DAN: blocksToReplicate.size()   = 5
+17/03/17 07:30:31 FATAL namenode.NNThroughputBenchmark: Log level = ERROR
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: DAN 4 : numThreads 1024
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+blockmanagement.BlockManager: Size of toAdd        : 0
+blockmanagement.BlockManager: Size of toRemove     : 195
+blockmanagement.BlockManager: Size of toInvalidate : 0
+blockmanagement.BlockManager: Size of toCorrupt    : 0
+blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- 1 datanodes  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Elapsed Time: 169
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark:  Ops per sec: 5.9171597633136095
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Average Time: 168
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- 2 datanodes  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Elapsed Time: 61
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark:  Ops per sec: 16.39344262295082
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Average Time: 61
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- 4 datanodes  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Elapsed Time: 41
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark:  Ops per sec: 24.390243902439025
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Average Time: 41
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- 8 datanodes  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Elapsed Time: 37
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark:  Ops per sec: 27.027027027027028
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Average Time: 37
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:31 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- 16 datanodes  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Elapsed Time: 37
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark:  Ops per sec: 27.027027027027028
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Average Time: 37
+17/03/17 07:30:31 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- 32 datanodes  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Elapsed Time: 28
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark:  Ops per sec: 35.714285714285715
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Average Time: 28
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- 64 datanodes  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Elapsed Time: 32
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark:  Ops per sec: 31.25
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Average Time: 32
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- 128 datanodes  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Elapsed Time: 35
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark:  Ops per sec: 28.571428571428573
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Average Time: 35
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- 256 datanodes  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Elapsed Time: 39
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark:  Ops per sec: 25.641025641025642
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Average Time: 39
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- 512 datanodes  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Elapsed Time: 59
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark:  Ops per sec: 16.949152542372882
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Average Time: 39
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Starting 1 blockReport(s).
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toAdd        : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toRemove     : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toInvalidate : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toCorrupt    : 0
+17/03/17 07:30:32 INFO blockmanagement.BlockManager: Size of toUC         : 0
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- 1024 datanodes  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Elapsed Time: 126
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.936507936507937
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Average Time: 45
+17/03/17 07:30:32 INFO namenode.NNThroughputBenchmark: Everything done!
+17/03/17 07:31:42 WARN blockmanagement.BlockManager: DAN: called computeReplicationWorkForBlock at computeReplicationWork
+17/03/17 07:31:42 INFO namenode.NNThroughputBenchmark: blocksPerReport = 50000
+17/03/17 07:31:42 INFO namenode.NNThroughputBenchmark: blocksPerFile = 1000
+17/03/17 07:31:42 INFO namenode.NNThroughputBenchmark: --- blockReport stats  ---
+17/03/17 07:31:42 INFO namenode.NNThroughputBenchmark: # operations: 1
+17/03/17 07:31:42 INFO namenode.NNThroughputBenchmark: Elapsed Time: 126
+17/03/17 07:31:42 INFO namenode.NNThroughputBenchmark:  Ops per sec: 7.936507936507937
+17/03/17 07:31:42 INFO namenode.NNThroughputBenchmark: Average Time: 45
+17/03/17 07:31:42 INFO mortbay.log: Stopped SelectChannelConnector@0.0.0.0:50070
+17/03/17 07:31:42 WARN blockmanagement.DecommissionManager: Monitor interrupted: java.lang.InterruptedException: sleep interrupted
+17/03/17 07:31:42 INFO namenode.FSEditLog: Ending log segment 1
+17/03/17 07:31:42 INFO namenode.FSEditLog: Number of transactions: 25693 Total time for transactions(ms): 1739Number of transactions batched in Syncs: 0 Number of syncs: 17071 SyncTimes(ms): 4469
+17/03/17 07:31:42 INFO nameno
+
+
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

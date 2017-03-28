@@ -989,6 +989,7 @@ public class NNThroughputBenchmark {
       }
     }
 
+    // DAN: important 1 All the block preparation things being procced
     void generateInputs(int[] ignore) throws IOException {
       int nrDatanodes = getNumDatanodes();
       int nrBlocks = (int)Math.ceil((double)blocksPerReport * nrDatanodes 
@@ -1006,7 +1007,15 @@ public class NNThroughputBenchmark {
         prevDNName = datanodes[idx].getName();
       }
 
+      // DAN: important 2 
       // create files 
+      LOG.info("DAN: Variable : ");
+      LOG.info("   nrDatanodes      = "+ nrDatanodes );
+      LOG.info("   nrBlocks         = "+ nrBlocks );
+      LOG.info("   blocksPerReport  = "+ blocksPerReport );
+      LOG.info("   replication      = "+ replication );
+      LOG.info("   blocksPerFile    = "+ blocksPerFile );
+      LOG.info("   nrFiles          = "+ nrFiles );
       LOG.info("Creating " + nrFiles + " with " + blocksPerFile + " blocks each.");
       FileNameGenerator nameGenerator;
       nameGenerator = new FileNameGenerator(getBaseDir(), 100);

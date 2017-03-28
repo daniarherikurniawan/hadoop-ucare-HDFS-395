@@ -4,12 +4,12 @@
  	vim	/proj/ucare/git/hadoop-ucare/psbin/mini-slaves
 
  	cd /proj/ucare/riza/start_script/
-	./setup-HDFS-395.sh
+	./setup-HDFS-395-DAN.sh
 	cd /mnt/extra/hadoop/
 	./runbench.sh
 
 	git checkout runbench.sh
-	git pull ucare-github master
+	git pull ucare-github-dan master
 	vim runbench.sh
 
 	The config is in echo $HADOOP_CONF_DIR directory
