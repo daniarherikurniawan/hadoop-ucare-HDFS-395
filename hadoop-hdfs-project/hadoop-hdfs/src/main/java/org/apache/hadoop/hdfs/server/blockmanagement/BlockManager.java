@@ -1537,7 +1537,7 @@ public class BlockManager {
       final Collection<Block> toInvalidate, 
       final Collection<BlockInfo> toCorrupt,
       final Collection<StatefulBlockInfo> toUC) {
-    // LOG.info("DAN: at processReportedBlock");
+    LOG.info("DAN: at processReportedBlock");
     
     if(LOG.isDebugEnabled()) {
       LOG.debug("Reported block " + block
@@ -2140,6 +2140,8 @@ public class BlockManager {
     Collection<Block> toInvalidate = new LinkedList<Block>();
     Collection<BlockInfo> toCorrupt = new LinkedList<BlockInfo>();
     Collection<StatefulBlockInfo> toUC = new LinkedList<StatefulBlockInfo>();
+    LOG.info("DAN: after processReportedBlock should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+
     processReportedBlock(node, block, ReplicaState.FINALIZED,
                               toAdd, toInvalidate, toCorrupt, toUC);
     LOG.info("DAN: after processReportedBlock should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
