@@ -416,12 +416,6 @@ public class NNThroughputBenchmark {
     }
 
     public void run() {
-      LOG.info("DAN: start daemons ");
-      LOG.info("DAN: Variable ");
-      LOG.info("    daemonId      = " + daemonId );
-      LOG.info("    opsPerThread  = " + opsPerThread );
-      LOG.info("    statsOp       = " + statsOp );
-
       localNumOpsExecuted = 0;
       localCumulativeTime = 0;
       arg1 = statsOp.getExecutionArgument(daemonId);
