@@ -1541,11 +1541,12 @@ public class BlockManager {
     
     // LOG.isDebugEnabled()
     if(true) {
-      LOG.info("DAN: Reported block " + block
+      LOG.info("  DAN: Reported block " + block
           + " on " + dn.getName() + " size " + block.getNumBytes()
           + " replicaState = " + reportedState);
     }
-  
+      LOG.info("  DAN: reportedState == ReplicaState.FINALIZED == " + (reportedState == ReplicaState.FINALIZED));
+    
     // find block by blockId
     BlockInfo storedBlock = blocksMap.getStoredBlock(block);
     if(storedBlock == null) {
@@ -1560,7 +1561,7 @@ public class BlockManager {
     // Block is on the NN
     // LOG.isDebugEnabled()
     if(true) {
-      LOG.info("DAN: In memory blockUCState = " + ucState);
+      LOG.info("  DAN: In memory blockUCState = " + ucState);
     }
 
     // Ignore replicas already scheduled to be removed from the DN
