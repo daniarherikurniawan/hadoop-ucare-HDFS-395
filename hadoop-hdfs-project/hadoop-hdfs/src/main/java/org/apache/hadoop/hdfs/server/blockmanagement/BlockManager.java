@@ -1471,7 +1471,7 @@ public class BlockManager {
     LOG.info("Size of toInvalidate : "+toInvalidate.size());
     LOG.info("Size of toCorrupt    : "+toCorrupt.size());
     LOG.info("Size of toUC         : "+toUC.size());
-    
+
     BlockInfo delimiter = new BlockInfo(new Block(), 1);
     boolean added = dn.addBlock(delimiter);
     assert added : "Delimiting block cannot be present in the node";
@@ -1480,6 +1480,8 @@ public class BlockManager {
     // scan the report and process newly reported blocks
     BlockReportIterator itBR = newReport.getBlockReportIterator();
     while(itBR.hasNext()) {
+      LOG.info("DAN: found newly reported blocks");
+
       Block iblk = itBR.next();
       ReplicaState iState = itBR.getCurrentReplicaState();
       BlockInfo storedBlock = processReportedBlock(dn, iblk, iState,
