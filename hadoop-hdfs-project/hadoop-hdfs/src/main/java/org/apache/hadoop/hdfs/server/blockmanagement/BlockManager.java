@@ -1360,6 +1360,10 @@ public class BlockManager {
       namesystem.writeUnlock();
     }
 
+    LOG.info("DAN: BLOCK* processReport: from "
+        + nodeID.getName() + ", blocks: " + newReport.getNumberOfBlocks()
+        + ", processing time: " + (endTime - startTime) + " msecs");
+
     // Log the block report processing stats from Namenode perspective
     NameNode.getNameNodeMetrics().addBlockReport((int) (endTime - startTime));
     NameNode.stateChangeLog.info("BLOCK* processReport: from "
