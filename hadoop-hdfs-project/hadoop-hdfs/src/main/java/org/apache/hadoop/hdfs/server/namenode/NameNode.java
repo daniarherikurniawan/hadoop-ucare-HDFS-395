@@ -1201,7 +1201,9 @@ public class NameNode implements NamenodeProtocols {
            + "from " + nodeReg.getName() + " " + blist.getNumberOfBlocks()
            + " blocks");
     }
-
+    LOG.info(" DAN: should be called before processReport *BLOCK* NameNode.blockReport: "
+           + "from " + nodeReg.getName() + " " + blist.getNumberOfBlocks()
+           + " blocks");
     namesystem.getBlockManager().processReport(nodeReg, poolId, blist);
     if (getFSImage().isUpgradeFinalized())
       return new DatanodeCommand.Finalize(poolId);
