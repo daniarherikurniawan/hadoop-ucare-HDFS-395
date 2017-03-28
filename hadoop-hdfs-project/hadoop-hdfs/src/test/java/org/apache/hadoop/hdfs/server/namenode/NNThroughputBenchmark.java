@@ -259,7 +259,7 @@ public class NNThroughputBenchmark {
         while (curNumThread <= numThreads) {
           numOpsExecuted = 0;
           cumulativeTime = 0;
-          
+          // DAN: important 3 about to start benchmark per # datanodes
           try {
             daemons.clear();
             for(tIdx=0; tIdx < curNumThread; tIdx++)
@@ -280,6 +280,7 @@ public class NNThroughputBenchmark {
               incrementStats(d.localNumOpsExecuted, d.localCumulativeTime);
               // System.out.println(d.toString() + ": ops Exec = " + d.localNumOpsExecuted);
             }
+            // DAN: important 4
             LOG.info("--- " + curNumThread + " datanodes  ---");
             this.printStats();
           }
@@ -415,6 +416,12 @@ public class NNThroughputBenchmark {
     }
 
     public void run() {
+      LOG.info("DAN: start daemons ");
+      LOG.info("DAN: Variable ");
+      LOG.info("    daemonId      = " + daemonId );
+      LOG.info("    opsPerThread  = " + opsPerThread );
+      LOG.info("    statsOp       = " + statsOp );
+
       localNumOpsExecuted = 0;
       localCumulativeTime = 0;
       arg1 = statsOp.getExecutionArgument(daemonId);
