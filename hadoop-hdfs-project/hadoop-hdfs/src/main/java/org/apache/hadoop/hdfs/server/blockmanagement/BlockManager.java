@@ -1546,11 +1546,14 @@ public class BlockManager {
           + " replicaState = " + reportedState);
     }
       LOG.info("  DAN: reportedState == ReplicaState.FINALIZED == " + (reportedState == ReplicaState.FINALIZED));
-      LOG.info("  DAN: storedBlock.findDatanode(dn) = " + storedBlock.findDatanode(dn) );
-      LOG.info("  DAN: storedBlock.findDatanode(dn) < 0 == " + (storedBlock.findDatanode(dn) < 0));
+      
     
     // find block by blockId
     BlockInfo storedBlock = blocksMap.getStoredBlock(block);
+
+      LOG.info("  DAN: storedBlock.findDatanode(dn) = " + storedBlock.findDatanode(dn) );
+      LOG.info("  DAN: storedBlock.findDatanode(dn) < 0 == " + (storedBlock.findDatanode(dn) < 0));
+
     if(storedBlock == null) {
       // If blocksMap does not contain reported block id,
       // the replica should be removed from the data-node.
