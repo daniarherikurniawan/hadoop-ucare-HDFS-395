@@ -1328,6 +1328,8 @@ public class BlockManager {
   public void processReport(final DatanodeID nodeID, final String poolId,
       final BlockListAsLongs newReport) throws IOException {
     namesystem.writeLock();
+    LOG.info("DAN: at processReport nodeID = "+ nodeID);
+
     final long startTime = Util.now(); //after acquiring write lock
     final long endTime;
     try {
