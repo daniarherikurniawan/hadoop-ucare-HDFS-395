@@ -1550,6 +1550,7 @@ public class BlockManager {
     if(storedBlock == null) {
       // If blocksMap does not contain reported block id,
       // the replica should be removed from the data-node.
+      LOG.info("DAN:      toInvalidate.add");
       toInvalidate.add(new Block(block));
       return null;
     }
@@ -1568,11 +1569,13 @@ public class BlockManager {
     }
 
     if (isReplicaCorrupt(block, reportedState, storedBlock, ucState, dn)) {
+      LOG.info("DAN:      toCorrupt.add");
       toCorrupt.add(storedBlock);
       return storedBlock;
     }
 
     if (isBlockUnderConstruction(storedBlock, ucState, reportedState)) {
+      LOG.info("DAN:      toUC.add");
       toUC.add(new StatefulBlockInfo(
           (BlockInfoUnderConstruction)storedBlock, reportedState));
       return storedBlock;
@@ -1581,6 +1584,7 @@ public class BlockManager {
     //add replica if appropriate
     if (reportedState == ReplicaState.FINALIZED
         && storedBlock.findDatanode(dn) < 0) {
+      LOG.info("DAN:      toAdd.add");
       toAdd.add(storedBlock);
     }
     return storedBlock;
