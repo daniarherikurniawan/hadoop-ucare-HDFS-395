@@ -143,3 +143,13 @@ edited:
 
 56000
 55000
+
+date
+93.188.160.233
+
+
+sci
+89.38.147.133
+
+
+generatesInput -> in the last it sent prepare block reports (formBlockReport)
