@@ -1569,7 +1569,7 @@ public class BlockManager {
     // Block is on the NN
     // LOG.isDebugEnabled()
     if(true) {
-      LOG.info("  DAN: In memory blockUCState = " + ucState);
+      // LOG.info("  DAN: In memory blockUCState = " + ucState);
     }
 
     // Ignore replicas already scheduled to be removed from the DN
@@ -2155,11 +2155,11 @@ public class BlockManager {
     Collection<Block> toInvalidate = new LinkedList<Block>();
     Collection<BlockInfo> toCorrupt = new LinkedList<BlockInfo>();
     Collection<StatefulBlockInfo> toUC = new LinkedList<StatefulBlockInfo>();
-    LOG.info("DAN: before processReportedBlock should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+    // LOG.info("DAN: before processReportedBlock should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
     processReportedBlock(node, block, ReplicaState.FINALIZED,
                               toAdd, toInvalidate, toCorrupt, toUC);
-    LOG.info("DAN: after processReportedBlock should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+    // LOG.info("DAN: after processReportedBlock should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
     // the block is only in one of the to-do lists
     // if it is in none then data-node already has it
