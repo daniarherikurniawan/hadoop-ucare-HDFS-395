@@ -2170,6 +2170,7 @@ public class BlockManager {
       addStoredBlockUnderConstruction(b.storedBlock, node, b.reportedState);
     }
     for (BlockInfo b : toAdd) {
+      LOG.warn("DAN: enter toAdd!!!!!");
       addStoredBlock(b, node, delHintNode, true);
     }
     for (Block b : toInvalidate) {
