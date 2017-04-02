@@ -1486,7 +1486,7 @@ public class BlockManager {
                                   toAdd, toInvalidate, toCorrupt, toUC);
 
       // LOG.info("    Size of toRemove#2     : "+toRemove.size());
-      // LOG.info("  DAN: at reportDiff after processReportedBlock should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+      LOG.info("  DAN: at reportDiff after processReportedBlock #2 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
       // move block to the head of the list
       if(storedBlock != null && storedBlock.findDatanode(dn) >= 0)
@@ -2159,7 +2159,7 @@ public class BlockManager {
 
     processReportedBlock(node, block, ReplicaState.FINALIZED,
                               toAdd, toInvalidate, toCorrupt, toUC);
-    // LOG.info("DAN: after processReportedBlock should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+    LOG.info("DAN: after processReportedBlock #1 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
     // the block is only in one of the to-do lists
     // if it is in none then data-node already has it
