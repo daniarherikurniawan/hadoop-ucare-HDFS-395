@@ -1587,8 +1587,8 @@ public class BlockManager {
 
     if (isBlockUnderConstruction(storedBlock, ucState, reportedState)) {
       // LOG.info("DAN:      toUC.add");
-      // toUC.add(new StatefulBlockInfo(
-      //     (BlockInfoUnderConstruction)storedBlock, reportedState));
+      toUC.add(new StatefulBlockInfo(
+          (BlockInfoUnderConstruction)storedBlock, reportedState));
       return storedBlock;
     }
 
