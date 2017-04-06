@@ -926,10 +926,10 @@ public class BlockManager {
     // replicate blocks
     int scheduledReplicationCount = 0;
     for (int i=0; i<blocksToReplicate.size(); i++) {
-    LOG.warn("  i   = "+i);
+    // LOG.warn("  i   = "+i);
 
       for(Block block : blocksToReplicate.get(i)) {
-        LOG.warn("  blocksToReplicate " + i + "  = "+ block);
+        // LOG.warn("  blocksToReplicate " + i + "  = "+ block);
 
         if (computeReplicationWorkForBlock(block, i)) {
           scheduledReplicationCount++;
@@ -1485,7 +1485,7 @@ public class BlockManager {
 
       Block iblk = itBR.next();
       ReplicaState iState = itBR.getCurrentReplicaState();
-      LOG.info("  DAN: at reportDiff before processReportedBlock #2 should be not 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+      // LOG.info("  DAN: at reportDiff before processReportedBlock #2 should be not 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
       BlockInfo storedBlock = processReportedBlock(dn, iblk, iState,
                                   toAdd, toInvalidate, toCorrupt, toUC);
