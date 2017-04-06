@@ -275,7 +275,6 @@ public class NNThroughputBenchmark {
             LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
             for(nIdx=0; nIdx < curNumThread; nIdx++)
               // DAN: heu ???
-              LOG.info("DAN: start client daemon");
               daemons.get(nIdx).start();
 
           } finally {
@@ -1077,22 +1076,17 @@ public class NNThroughputBenchmark {
         LOG.info("DAN: inside addblock ");
         LocatedBlock loc = nameNode.addBlock(fileName, clientName, prevBlock, null);
         prevBlock = loc.getBlock();
-        int i = 0;
         for(DatanodeInfo dnInfo : loc.getLocations()) {
-          i++;
           int dnIdx = Arrays.binarySearch(datanodes, dnInfo.getName());
           LOG.info("DAN: Placing block "+dnInfo+" to datanode "+dnIdx);
           // DAN: this code below lead to BlockManager and then send block reports incrementally (true)
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
-          LOG.info("DAN: sending blockReceived reports (only the original block)");
-          // if (i == 1){
-            nameNode.blockReceived(
-                datanodes[dnIdx].dnRegistration, 
-                loc.getBlock().getBlockPoolId(),
-                new Block[] {loc.getBlock().getLocalBlock()},
-                new String[] {""});
-          // }
-
+          LOG.info("DAN: sending blockReceived reports ");
+          nameNode.blockReceived(
+              datanodes[dnIdx].dnRegistration, 
+              loc.getBlock().getBlockPoolId(),
+              new Block[] {loc.getBlock().getLocalBlock()},
+              new String[] {""});
         }
       }
       return prevBlock;

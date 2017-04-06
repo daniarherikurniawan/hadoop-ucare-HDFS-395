@@ -926,8 +926,10 @@ public class BlockManager {
     // replicate blocks
     int scheduledReplicationCount = 0;
     for (int i=0; i<blocksToReplicate.size(); i++) {
+    LOG.warn("  i   = "+i);
+
       for(Block block : blocksToReplicate.get(i)) {
-        LOG.warn("  blocksToReplicate " + i + "  = "+ blocksToReplicate.get(i));
+        LOG.warn("  blocksToReplicate " + i + "  = "+ block);
 
         if (computeReplicationWorkForBlock(block, i)) {
           scheduledReplicationCount++;
