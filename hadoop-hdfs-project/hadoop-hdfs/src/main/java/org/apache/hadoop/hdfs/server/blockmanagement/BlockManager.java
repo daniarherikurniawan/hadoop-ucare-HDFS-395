@@ -1666,6 +1666,11 @@ public class BlockManager {
     if (reportedState == ReplicaState.FINALIZED && block.findDatanode(node) < 0) {
       addStoredBlock(block, node, null, true);
     }
+
+    BlockInfo storedBlock = blocksMap.getStoredBlock(block);
+    BlockUCState ucState = storedBlock.getBlockUCState();
+    LOG.info("  DAN: In memory blockUCState #3 = " + ucState);
+    LOG.info("  DAN: storedBlock.findDatanode(dn) #3 = " + storedBlock.findDatanode(node));
   }
   
   /**
@@ -2163,7 +2168,6 @@ public class BlockManager {
                               toAdd, toInvalidate, toCorrupt, toUC);
 
     BlockInfo storedBlock = blocksMap.getStoredBlock(block);
-
     BlockUCState ucState = storedBlock.getBlockUCState();
     LOG.info("  DAN: In memory blockUCState #1 = " + ucState);
     LOG.info("  DAN: storedBlock.findDatanode(dn) #1 = " + storedBlock.findDatanode(node));
