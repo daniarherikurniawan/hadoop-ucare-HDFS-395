@@ -25,6 +25,10 @@ import org.apache.hadoop.classification.InterfaceStability;
 import org.apache.hadoop.hdfs.server.common.HdfsConstants.ReplicaState;
 import org.apache.hadoop.hdfs.server.datanode.ReplicaInfo;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.commons.logging.impl.Log4JLogger;
+
 /**
  * This class provides an interface for accessing list of blocks that
  * has been implemented as long[].
@@ -45,6 +49,8 @@ import org.apache.hadoop.hdfs.server.datanode.ReplicaInfo;
 @InterfaceAudience.Private
 @InterfaceStability.Evolving
 public class BlockListAsLongs implements Iterable<Block> {
+  // DAN: logging 
+  private static final Log LOG = LogFactory.getLog(BlockListAsLongs.class);
   /**
    * A finalized block as 3 longs
    *   block-id and block length and generation stamp
@@ -198,6 +204,10 @@ public class BlockListAsLongs implements Iterable<Block> {
             (blockList[0] + 1) * LONGS_PER_FINALIZED_BLOCK +
             blockList[1] * LONGS_PER_UC_BLOCK :
               "Number of blocks is inconcistent with the array length";
+    
+    LOG.info("DAN : NumberOfFinalizedReplicas = "+ getNumberOfFinalizedReplicas());
+    LOG.info("DAN : NumberOfUCReplicas = "+ getNumberOfUCReplicas());
+
     return getNumberOfFinalizedReplicas() + getNumberOfUCReplicas();
   }
 
