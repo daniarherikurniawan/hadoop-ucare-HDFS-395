@@ -205,8 +205,8 @@ public class BlockListAsLongs implements Iterable<Block> {
             blockList[1] * LONGS_PER_UC_BLOCK :
               "Number of blocks is inconcistent with the array length";
     
-    LOG.info("DAN : NumberOfFinalizedReplicas = "+ getNumberOfFinalizedReplicas());
-    LOG.info("DAN : NumberOfUCReplicas = "+ getNumberOfUCReplicas());
+    // LOG.info("DAN : NumberOfFinalizedReplicas = "+ getNumberOfFinalizedReplicas());
+    // LOG.info("DAN : NumberOfUCReplicas = "+ getNumberOfUCReplicas());
 
     return getNumberOfFinalizedReplicas() + getNumberOfUCReplicas();
   }

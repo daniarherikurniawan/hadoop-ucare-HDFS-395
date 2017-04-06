@@ -2167,6 +2167,7 @@ public class BlockManager {
       : "The block should be only in one of the lists.";
 
     for (StatefulBlockInfo b : toUC) { 
+      LOG.warn("DAN: enter toUC!!!!!");
       addStoredBlockUnderConstruction(b.storedBlock, node, b.reportedState);
     }
     for (BlockInfo b : toAdd) {
@@ -2180,6 +2181,7 @@ public class BlockManager {
       addToInvalidates(b, node);
     }
     for (BlockInfo b : toCorrupt) {
+      LOG.warn("DAN: enter toCorrupt!!!!!");
       markBlockAsCorrupt(b, node);
     }
   }
