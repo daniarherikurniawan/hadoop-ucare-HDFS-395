@@ -1673,7 +1673,8 @@ public class BlockManager {
 
     if (reportedState == ReplicaState.FINALIZED && block.findDatanode(node) < 0) {
       LOG.info("  DAN: block.findDatanode(node) #3 = " + block.findDatanode(node));
-      addStoredBlock(block, node, null, true);
+      // DAN: this is where the incremental report starts
+      // addStoredBlock(block, node, null, true);
     }
 
     LOG.info("  DAN: storedBlock.findDatanode(dn) #3 = " + storedBlock.findDatanode(node));
