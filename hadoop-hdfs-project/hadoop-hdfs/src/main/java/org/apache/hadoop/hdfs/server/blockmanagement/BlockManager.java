@@ -1569,8 +1569,8 @@ public class BlockManager {
     // Block is on the NN
     // LOG.isDebugEnabled()
     if(true) {
-      LOG.info("  DAN: In memory blockUCState #2 = " + ucState);
-      LOG.info("  DAN: storedBlock.findDatanode(dn) #2 = " + storedBlock.findDatanode(dn));
+      // LOG.info("  DAN: In memory blockUCState #2 = " + ucState);
+      // LOG.info("  DAN: storedBlock.findDatanode(dn) #2 = " + storedBlock.findDatanode(dn));
 
     }
 
@@ -1588,7 +1588,12 @@ public class BlockManager {
     }
 
     if (isBlockUnderConstruction(storedBlock, ucState, reportedState)) {
-      // LOG.info("DAN:      toUC.add");
+      // DAN: start LOG.info("DAN:      toUC.add");
+
+      // LOG.info("DAN:      toAdd.add");
+      // toAdd.add(storedBlock);
+
+      // DAN: end
       toUC.add(new StatefulBlockInfo(
           (BlockInfoUnderConstruction)storedBlock, reportedState));
       return storedBlock;
@@ -1665,19 +1670,19 @@ public class BlockManager {
 
     BlockInfo storedBlock = blocksMap.getStoredBlock(block);
     BlockUCState ucState = storedBlock.getBlockUCState();
-    LOG.info("  DAN: In memory blockUCState #3 = " + ucState);
+    // LOG.info("  DAN: In memory blockUCState #3 = " + ucState);
 
     block.addReplicaIfNotPresent(node, block, reportedState);
     
-    LOG.info("  DAN: reportedState #3 = " + reportedState);
+    // LOG.info("  DAN: reportedState #3 = " + reportedState);
 
     if (reportedState == ReplicaState.FINALIZED && block.findDatanode(node) < 0) {
-      LOG.info("  DAN: block.findDatanode(node) #3 = " + block.findDatanode(node));
+      // LOG.info("  DAN: block.findDatanode(node) #3 = " + block.findDatanode(node));
       // DAN: this is where the incremental report starts
       addStoredBlock(block, node, null, true);
     }
 
-    LOG.info("  DAN: storedBlock.findDatanode(dn) #3 = " + storedBlock.findDatanode(node));
+    // LOG.info("  DAN: storedBlock.findDatanode(dn) #3 = " + storedBlock.findDatanode(node));
   }
   
   /**
@@ -2169,17 +2174,17 @@ public class BlockManager {
     Collection<Block> toInvalidate = new LinkedList<Block>();
     Collection<BlockInfo> toCorrupt = new LinkedList<BlockInfo>();
     Collection<StatefulBlockInfo> toUC = new LinkedList<StatefulBlockInfo>();
-    // LOG.info("DAN: before processReportedBlock should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+    LOG.info("DAN: before processReportedBlock #1 should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
     processReportedBlock(node, block, ReplicaState.FINALIZED,
                               toAdd, toInvalidate, toCorrupt, toUC);
 
     BlockInfo storedBlock = blocksMap.getStoredBlock(block);
     BlockUCState ucState = storedBlock.getBlockUCState();
-    LOG.info("  DAN: In memory blockUCState #1 = " + ucState);
-    LOG.info("  DAN: storedBlock.findDatanode(dn) #1 = " + storedBlock.findDatanode(node));
+    // LOG.info("  DAN: In memory blockUCState #1 = " + ucState);
+    // LOG.info("  DAN: storedBlock.findDatanode(dn) #1 = " + storedBlock.findDatanode(node));
 
-    // LOG.info("DAN: after processReportedBlock #1 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+    LOG.info("DAN: after processReportedBlock #1 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
     // the block is only in one of the to-do lists
     // if it is in none then data-node already has it
