@@ -229,7 +229,9 @@ public class NNThroughputBenchmark {
       LOG.info("DAN 1 : numThreads "+numThreads);
       daemons = new ArrayList<StatsDaemon>();
       long start = 0;
-      int curNumThread = 1;
+      // DAN: single benchmark
+      int curNumThread = numThreads;
+//      int curNumThread = 1;
       try {
 
         LOG.info("DAN 2 : numThreads "+numThreads);
@@ -267,7 +269,7 @@ public class NNThroughputBenchmark {
               daemons.add(new StatsDaemon(tIdx, opsPerThread[tIdx], this));
 
             start = System.currentTimeMillis();
-            // DAN: important 4 starting to send block reports
+            // DAN: important 4 should be the starting point to send block reports
             LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
             for(nIdx=0; nIdx < curNumThread; nIdx++)
               // DAN: heu ???
