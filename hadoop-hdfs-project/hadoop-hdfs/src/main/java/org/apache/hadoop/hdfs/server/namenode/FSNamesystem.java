@@ -1468,9 +1468,9 @@ public class FSNamesystem implements Namesystem, FSClusterStats,
       INodeFileUnderConstruction pendingFile  = (INodeFileUnderConstruction) 
                                                 pathINodes[inodesLen - 1];
                                                            
-      if (!checkFileProgress(pendingFile, false)) {
-        throw new NotReplicatedYetException("Not replicated yet:" + src);
-      }
+      // if (!checkFileProgress(pendingFile, false)) {
+      //   throw new NotReplicatedYetException("Not replicated yet:" + src);
+      // }
 
       // allocate new block record block locations in INode.
       newBlock = allocateBlock(src, pathINodes, targets);
