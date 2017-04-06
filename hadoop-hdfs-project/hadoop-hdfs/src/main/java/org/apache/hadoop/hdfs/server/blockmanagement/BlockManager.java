@@ -1476,11 +1476,12 @@ public class BlockManager {
     // scan the report and process newly reported blocks
     BlockReportIterator itBR = newReport.getBlockReportIterator();
     LOG.info("  DAN: number of newly reported blocks = " + newReport.getNumberOfBlocks());
+    LOG.info("  DAN: ================================================================================= ...");
     while(itBR.hasNext()) {
 
       Block iblk = itBR.next();
       ReplicaState iState = itBR.getCurrentReplicaState();
-      // LOG.info("  DAN: at reportDiff before processReportedBlock #2 should be not 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+      LOG.info("  DAN: at reportDiff before processReportedBlock #2 should be not 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
       BlockInfo storedBlock = processReportedBlock(dn, iblk, iState,
                                   toAdd, toInvalidate, toCorrupt, toUC);
