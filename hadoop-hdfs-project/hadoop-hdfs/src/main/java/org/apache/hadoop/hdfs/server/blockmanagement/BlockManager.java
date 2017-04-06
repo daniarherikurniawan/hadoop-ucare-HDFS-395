@@ -2196,7 +2196,7 @@ public class BlockManager {
       : "The block should be only in one of the lists.";
 
     for (StatefulBlockInfo b : toUC) { 
-      // LOG.warn("DAN: enter toUC!!!!!"); 
+      LOG.warn("DAN: enter toUC!!!!!"); 
       // DAN: entered thousands time
 
       block.addReplicaIfNotPresent(node, block, reportedState);
