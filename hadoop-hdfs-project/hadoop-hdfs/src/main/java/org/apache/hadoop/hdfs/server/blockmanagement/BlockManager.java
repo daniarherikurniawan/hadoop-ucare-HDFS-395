@@ -2204,7 +2204,8 @@ public class BlockManager {
     }
     for (BlockInfo b : toAdd) {
       LOG.warn("DAN: enter toAdd!!!!!");
-      addStoredBlock(b, node, delHintNode, true);
+      // DAN: addStoredBlock only when doing benchmarking 
+      // addStoredBlock(b, node, delHintNode, true);
 
       // From toUC like this
       // addStoredBlock(block, node, null, true);
