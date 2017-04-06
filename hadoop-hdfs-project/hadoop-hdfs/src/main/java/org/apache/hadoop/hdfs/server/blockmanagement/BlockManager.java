@@ -1480,13 +1480,13 @@ public class BlockManager {
 
       Block iblk = itBR.next();
       ReplicaState iState = itBR.getCurrentReplicaState();
-      // LOG.info("  DAN: at reportDiff before processReportedBlock should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+      LOG.info("  DAN: at reportDiff before processReportedBlock #2 should be not 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
       BlockInfo storedBlock = processReportedBlock(dn, iblk, iState,
                                   toAdd, toInvalidate, toCorrupt, toUC);
 
       // LOG.info("    Size of toRemove#2     : "+toRemove.size());
-      LOG.info("  DAN: at reportDiff after processReportedBlock #2 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+      // LOG.info("  DAN: at reportDiff after processReportedBlock #2 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
       // move block to the head of the list
       if(storedBlock != null && storedBlock.findDatanode(dn) >= 0)
@@ -1586,7 +1586,7 @@ public class BlockManager {
     }
 
     if (isBlockUnderConstruction(storedBlock, ucState, reportedState)) {
-      LOG.info("DAN:      toUC.add");
+      // LOG.info("DAN:      toUC.add");
       toUC.add(new StatefulBlockInfo(
           (BlockInfoUnderConstruction)storedBlock, reportedState));
       return storedBlock;
@@ -2159,7 +2159,7 @@ public class BlockManager {
 
     processReportedBlock(node, block, ReplicaState.FINALIZED,
                               toAdd, toInvalidate, toCorrupt, toUC);
-    LOG.info("DAN: after processReportedBlock #1 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+    // LOG.info("DAN: after processReportedBlock #1 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
     // the block is only in one of the to-do lists
     // if it is in none then data-node already has it
