@@ -1055,11 +1055,12 @@ public class NNThroughputBenchmark {
             new EnumSetWritable<CreateFlag>(EnumSet.of(CreateFlag.CREATE, CreateFlag.OVERWRITE)), true, replication,
             BLOCK_SIZE);
         LOG.info("DAN: isolate#2");
-        // DAN: start sending reports (true)
+        // DAN: begin sending reports (true) through BlockManager
         ExtendedBlock lastBlock = addBlocks(fileName, clientName);
-        LOG.info("DAN: isolate#4");
+        // DAN: end sending reports (true)
+        LOG.info("DAN: isolate#3");
         nameNode.complete(fileName, clientName, lastBlock);
-        LOG.info("DAN: isolate#5");
+        LOG.info("DAN: isolate#4");
       }
       LOG.info("DAN: prepare block reports should not sending the reports (true)");
       // prepare block reports
@@ -1072,11 +1073,12 @@ public class NNThroughputBenchmark {
     throws IOException {
       ExtendedBlock prevBlock = null;
       for(int jdx = 0; jdx < blocksPerFile; jdx++) {
+        LOG.info("DAN: inside addblock ");
         LocatedBlock loc = nameNode.addBlock(fileName, clientName, prevBlock, null);
         prevBlock = loc.getBlock();
         for(DatanodeInfo dnInfo : loc.getLocations()) {
           int dnIdx = Arrays.binarySearch(datanodes, dnInfo.getName());
-          //LOG.info("Placing block "+dnInfo+" to datanode "+dnIdx);
+          LOG.info("DAN: Placing block "+dnInfo+" to datanode "+dnIdx);
           // DAN: slow down the block adding
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
           nameNode.blockReceived(
