@@ -1569,9 +1569,9 @@ public class BlockManager {
     // Block is on the NN
     // LOG.isDebugEnabled()
     if(true) {
-      LOG.info("  DAN: In memory blockUCState = " + ucState);
-      LOG.info("  DAN: storedBlock.findDatanode(dn) = " + storedBlock.findDatanode(dn));
-      
+      LOG.info("  DAN: In memory blockUCState #2 = " + ucState);
+      LOG.info("  DAN: storedBlock.findDatanode(dn) #2 = " + storedBlock.findDatanode(dn));
+
     }
 
     // Ignore replicas already scheduled to be removed from the DN
@@ -2161,6 +2161,13 @@ public class BlockManager {
 
     processReportedBlock(node, block, ReplicaState.FINALIZED,
                               toAdd, toInvalidate, toCorrupt, toUC);
+
+    BlockInfo storedBlock = blocksMap.getStoredBlock(block);
+
+    BlockUCState ucState = storedBlock.getBlockUCState();
+    LOG.info("  DAN: In memory blockUCState #1 = " + ucState);
+    LOG.info("  DAN: storedBlock.findDatanode(dn) #1 = " + storedBlock.findDatanode(node));
+
     // LOG.info("DAN: after processReportedBlock #1 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
     // the block is only in one of the to-do lists
