@@ -1055,11 +1055,13 @@ public class NNThroughputBenchmark {
             new EnumSetWritable<CreateFlag>(EnumSet.of(CreateFlag.CREATE, CreateFlag.OVERWRITE)), true, replication,
             BLOCK_SIZE);
         LOG.info("DAN: isolate#2");
+        // DAN: start sending reports (true)
         ExtendedBlock lastBlock = addBlocks(fileName, clientName);
+        LOG.info("DAN: isolate#4");
         nameNode.complete(fileName, clientName, lastBlock);
-        LOG.info("DAN: isolate#3");
+        LOG.info("DAN: isolate#5");
       }
-      LOG.info("DAN: prepare block reports should not sending the reports");
+      LOG.info("DAN: prepare block reports should not sending the reports (true)");
       // prepare block reports
       for(int idx=0; idx < nrDatanodes; idx++) {
         datanodes[idx].formBlockReport();
