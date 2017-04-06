@@ -1599,7 +1599,7 @@ public class BlockManager {
       // toAdd.add(storedBlock);
 
       // DAN: end
-      LOG.info("DAN:      toUC.add");
+      // LOG.info("DAN:      toUC.add");
       toUC.add(new StatefulBlockInfo(
           (BlockInfoUnderConstruction)storedBlock, reportedState));
       //DAN: prevent return a value before checking toAdd
@@ -1609,7 +1609,7 @@ public class BlockManager {
     //add replica if appropriate
     if (reportedState == ReplicaState.FINALIZED
         && storedBlock.findDatanode(dn) < 0) {
-      LOG.info("DAN:      toAdd.add");
+      // LOG.info("DAN:      toAdd.add");
       toAdd.add(storedBlock);
     }
     return storedBlock;
@@ -2201,14 +2201,14 @@ public class BlockManager {
       : "The block should be only in one of the lists.";
 
     for (StatefulBlockInfo b : toUC) { 
-      LOG.warn("DAN: enter toUC!!!!!"); 
+      // LOG.warn("DAN: enter toUC!!!!!"); 
       // DAN: entered thousands time 
  
       // block.addReplicaIfNotPresent(node, block, reportedState);
       addStoredBlockUnderConstruction(b.storedBlock, node, b.reportedState);
     }
     for (BlockInfo b : toAdd) {
-      LOG.warn("DAN: enter toAdd!!!!!");
+      // LOG.warn("DAN: enter toAdd!!!!!");
       // DAN: addStoredBlock only when doing benchmarking 
       addStoredBlock(b, node, delHintNode, true);
 
