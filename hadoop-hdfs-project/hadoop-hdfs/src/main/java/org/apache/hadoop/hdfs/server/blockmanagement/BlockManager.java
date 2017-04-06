@@ -1662,14 +1662,20 @@ public class BlockManager {
       DatanodeDescriptor node, 
       ReplicaState reportedState) 
   throws IOException {
-    block.addReplicaIfNotPresent(node, block, reportedState);
-    if (reportedState == ReplicaState.FINALIZED && block.findDatanode(node) < 0) {
-      addStoredBlock(block, node, null, true);
-    }
 
     BlockInfo storedBlock = blocksMap.getStoredBlock(block);
     BlockUCState ucState = storedBlock.getBlockUCState();
     LOG.info("  DAN: In memory blockUCState #3 = " + ucState);
+
+    block.addReplicaIfNotPresent(node, block, reportedState);
+    
+    LOG.info("  DAN: reportedState #3 = " + reportedState);
+
+    if (reportedState == ReplicaState.FINALIZED && block.findDatanode(node) < 0) {
+      LOG.info("  DAN: block.findDatanode(node) #3 = " + block.findDatanode(node));
+      addStoredBlock(block, node, null, true);
+    }
+
     LOG.info("  DAN: storedBlock.findDatanode(dn) #3 = " + storedBlock.findDatanode(node));
   }
   
