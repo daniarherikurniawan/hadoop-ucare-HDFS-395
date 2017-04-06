@@ -1569,7 +1569,9 @@ public class BlockManager {
     // Block is on the NN
     // LOG.isDebugEnabled()
     if(true) {
-      // LOG.info("  DAN: In memory blockUCState = " + ucState);
+      LOG.info("  DAN: In memory blockUCState = " + ucState);
+      LOG.info("  DAN: storedBlock.findDatanode(dn) = " + storedBlock.findDatanode(dn));
+      
     }
 
     // Ignore replicas already scheduled to be removed from the DN
