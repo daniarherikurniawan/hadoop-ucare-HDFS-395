@@ -1031,7 +1031,7 @@ public class NNThroughputBenchmark {
       String clientName = getClientName(007);
       nameNode.setSafeMode(FSConstants.SafeModeAction.SAFEMODE_LEAVE);
       for(int idx=0; idx < nrFiles; idx++) {
-        //DAN: somehow the report is sent around here
+        //DAN: somehow the report is sent around here (true)
         if (idx % 500 == 0){
           LOG.info("DAN: idx = "+idx);
         }
@@ -1047,14 +1047,19 @@ public class NNThroughputBenchmark {
                Thread.currentThread().interrupt();
           }
         }
+        
+        LOG.info("DAN: isolate#1");
 
         String fileName = nameGenerator.getNextFileName("ThroughputBench");
         nameNode.create(fileName, FsPermission.getDefault(), clientName,
             new EnumSetWritable<CreateFlag>(EnumSet.of(CreateFlag.CREATE, CreateFlag.OVERWRITE)), true, replication,
             BLOCK_SIZE);
+        LOG.info("DAN: isolate#2");
         ExtendedBlock lastBlock = addBlocks(fileName, clientName);
         nameNode.complete(fileName, clientName, lastBlock);
+        LOG.info("DAN: isolate#3");
       }
+      LOG.info("DAN: prepare block reports should not sending the reports");
       // prepare block reports
       for(int idx=0; idx < nrDatanodes; idx++) {
         datanodes[idx].formBlockReport();
