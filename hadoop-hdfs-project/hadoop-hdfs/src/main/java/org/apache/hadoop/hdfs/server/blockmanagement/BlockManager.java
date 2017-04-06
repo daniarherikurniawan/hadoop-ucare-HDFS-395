@@ -1357,7 +1357,7 @@ public class BlockManager {
       }
     } finally {
       endTime = Util.now();
-      // namesystem.writeUnlock();
+      namesystem.writeUnlock();
     }
 
     LOG.info("DAN: BLOCK* processReport: from "
@@ -2206,7 +2206,7 @@ public class BlockManager {
     for (BlockInfo b : toAdd) {
       LOG.warn("DAN: enter toAdd!!!!!");
       // DAN: addStoredBlock only when doing benchmarking 
-      addStoredBlock(b, node, delHintNode, true);
+      // addStoredBlock(b, node, delHintNode, true);
 
       // From toUC like this
       // addStoredBlock(block, node, null, true);
