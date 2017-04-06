@@ -213,7 +213,7 @@ public class NNThroughputBenchmark {
       LOG.info("DAN : change number replication to 6 ");
       // DAN: when it replicate, it send reports automatically
       // 1 is not taking effect
-      config.setInt(DFSConfigKeys.DFS_REPLICATION_KEY, 6);
+      config.setInt(DFSConfigKeys.DFS_REPLICATION_KEY, 1);
 
       /*DAN: replication default 3*/
       replication = (short) config.getInt(DFSConfigKeys.DFS_REPLICATION_KEY, 3);
@@ -231,7 +231,7 @@ public class NNThroughputBenchmark {
       LOG.info("DAN 1 : numThreads "+numThreads);
       daemons = new ArrayList<StatsDaemon>();
       long start = 0;
-      // DAN: single benchmark START!!
+      // DAN: single benchmark
       int curNumThread = numThreads;
 //      int curNumThread = 1;
       try {
@@ -275,8 +275,6 @@ public class NNThroughputBenchmark {
             LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
             for(nIdx=0; nIdx < curNumThread; nIdx++)
               // DAN: heu ???
-              // DAN: BENCHAMARKING STARTED, it call block manager and should do accumulative block report
-              LOG.info("DAN: DAEMON CLIENT STARTED!!!! "+nIdx);
               daemons.get(nIdx).start();
 
           } finally {
@@ -1050,19 +1048,19 @@ public class NNThroughputBenchmark {
           }
         }
         
-        // LOG.info("DAN: isolate#1");
+        LOG.info("DAN: isolate#1");
 
         String fileName = nameGenerator.getNextFileName("ThroughputBench");
         nameNode.create(fileName, FsPermission.getDefault(), clientName,
             new EnumSetWritable<CreateFlag>(EnumSet.of(CreateFlag.CREATE, CreateFlag.OVERWRITE)), true, replication,
             BLOCK_SIZE);
-        // LOG.info("DAN: isolate#2");
+        LOG.info("DAN: isolate#2");
         // DAN: begin sending reports (true) through BlockManager
         ExtendedBlock lastBlock = addBlocks(fileName, clientName);
         // DAN: end sending reports (true)
-        // LOG.info("DAN: isolate#3");
+        LOG.info("DAN: isolate#3");
         nameNode.complete(fileName, clientName, lastBlock);
-        // LOG.info("DAN: isolate#4");
+        LOG.info("DAN: isolate#4");
       }
       LOG.info("DAN: prepare block reports should not sending the reports (true)");
       // prepare block reports
@@ -1075,16 +1073,15 @@ public class NNThroughputBenchmark {
     throws IOException {
       ExtendedBlock prevBlock = null;
       for(int jdx = 0; jdx < blocksPerFile; jdx++) {
-        // LOG.info("DAN: inside addblock ");
+        LOG.info("DAN: inside addblock ");
         LocatedBlock loc = nameNode.addBlock(fileName, clientName, prevBlock, null);
         prevBlock = loc.getBlock();
         for(DatanodeInfo dnInfo : loc.getLocations()) {
           int dnIdx = Arrays.binarySearch(datanodes, dnInfo.getName());
-          // LOG.info("DAN: Placing block "+dnInfo+" to datanode "+dnIdx);
+          LOG.info("DAN: Placing block "+dnInfo+" to datanode "+dnIdx);
           // DAN: this code below lead to BlockManager and then send block reports incrementally (true)
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
           LOG.info("DAN: sending blockReceived reports ");
-          // DAN: this code below should not be executed whatever it takes to prevent incremental reports
           nameNode.blockReceived(
               datanodes[dnIdx].dnRegistration, 
               loc.getBlock().getBlockPoolId(),
