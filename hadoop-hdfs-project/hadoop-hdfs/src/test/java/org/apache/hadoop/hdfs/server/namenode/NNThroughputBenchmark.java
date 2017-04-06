@@ -1048,20 +1048,20 @@ public class NNThroughputBenchmark {
                Thread.currentThread().interrupt();
           }
         }
-        
-        LOG.info("DAN: isolate#1");
+        // 
+        // LOG.info("DAN: isolate#1");
 
         String fileName = nameGenerator.getNextFileName("ThroughputBench");
         nameNode.create(fileName, FsPermission.getDefault(), clientName,
             new EnumSetWritable<CreateFlag>(EnumSet.of(CreateFlag.CREATE, CreateFlag.OVERWRITE)), true, replication,
             BLOCK_SIZE);
-        LOG.info("DAN: isolate#2");
+        // LOG.info("DAN: isolate#2");
         // DAN: begin sending reports (true) through BlockManager
         ExtendedBlock lastBlock = addBlocks(fileName, clientName);
         // DAN: end sending reports (true)
-        LOG.info("DAN: isolate#3");
+        // LOG.info("DAN: isolate#3");
         nameNode.complete(fileName, clientName, lastBlock);
-        LOG.info("DAN: isolate#4");
+        // LOG.info("DAN: isolate#4");
       }
       LOG.info("DAN: prepare block reports should not sending the reports (true)");
       // prepare block reports
