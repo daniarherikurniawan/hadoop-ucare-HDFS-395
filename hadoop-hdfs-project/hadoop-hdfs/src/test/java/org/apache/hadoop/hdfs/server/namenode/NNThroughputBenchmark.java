@@ -1082,11 +1082,12 @@ public class NNThroughputBenchmark {
           // DAN: this code below lead to BlockManager and then send block reports incrementally (true)
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
           LOG.info("DAN: sending blockReceived reports ");
-          nameNode.blockReceived(
-              datanodes[dnIdx].dnRegistration, 
-              loc.getBlock().getBlockPoolId(),
-              new Block[] {loc.getBlock().getLocalBlock()},
-              new String[] {""});
+          // DAN: this code below should not be executed whatever it takes to prevent incremental reports
+          // nameNode.blockReceived(
+          //     datanodes[dnIdx].dnRegistration, 
+          //     loc.getBlock().getBlockPoolId(),
+          //     new Block[] {loc.getBlock().getLocalBlock()},
+          //     new String[] {""});
         }
       }
       return prevBlock;
