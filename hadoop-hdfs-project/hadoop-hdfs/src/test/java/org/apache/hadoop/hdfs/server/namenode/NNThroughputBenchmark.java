@@ -252,6 +252,7 @@ public class NNThroughputBenchmark {
         for(; tIdx < numThreads; tIdx++)
           opsPerThread[tIdx] = 0;
         setNameNodeLoggingLevel(Level.WARN);
+        // DAN: important 0 
         generateInputs(opsPerThread);
 	      setNameNodeLoggingLevel(logLevel);
 
@@ -266,8 +267,10 @@ public class NNThroughputBenchmark {
               daemons.add(new StatsDaemon(tIdx, opsPerThread[tIdx], this));
 
             start = System.currentTimeMillis();
+            // DAN: important 4 starting to send block reports
             LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
             for(nIdx=0; nIdx < curNumThread; nIdx++)
+              // DAN: heu ???
               daemons.get(nIdx).start();
 
           } finally {
@@ -280,7 +283,7 @@ public class NNThroughputBenchmark {
               incrementStats(d.localNumOpsExecuted, d.localCumulativeTime);
               // System.out.println(d.toString() + ": ops Exec = " + d.localNumOpsExecuted);
             }
-            // DAN: important 4
+            // DAN: important 5
             LOG.info("--- " + curNumThread + " datanodes  ---");
             this.printStats();
           }
@@ -416,12 +419,6 @@ public class NNThroughputBenchmark {
     }
 
     public void run() {
-      LOG.info("DAN: start daemons ");
-      LOG.info("DAN: Variable ");
-      LOG.info("    daemonId      = " + daemonId );
-      LOG.info("    opsPerThread  = " + opsPerThread );
-      LOG.info("    statsOp       = " + statsOp );
-
       localNumOpsExecuted = 0;
       localCumulativeTime = 0;
       arg1 = statsOp.getExecutionArgument(daemonId);
@@ -997,6 +994,7 @@ public class NNThroughputBenchmark {
     }
 
     // DAN: important 1 All the block preparation things being procced
+    // need investigation, incremental report still being sent
     void generateInputs(int[] ignore) throws IOException {
       int nrDatanodes = getNumDatanodes();
       int nrBlocks = (int)Math.ceil((double)blocksPerReport * nrDatanodes 
@@ -1029,7 +1027,7 @@ public class NNThroughputBenchmark {
       String clientName = getClientName(007);
       nameNode.setSafeMode(FSConstants.SafeModeAction.SAFEMODE_LEAVE);
       for(int idx=0; idx < nrFiles; idx++) {
-        
+        //DAN: somehow the report is sent around here
         if (idx % 500 == 0){
           LOG.info("DAN: idx = "+idx);
         }
@@ -1342,6 +1340,7 @@ public class NNThroughputBenchmark {
       // run each benchmark
       for(OperationStatsBase op : ops) {
         LOG.info("Starting benchmark: " + op.getOpName());
+        // DAN: important -1
         op.benchmark();
         op.cleanUp();
       }
