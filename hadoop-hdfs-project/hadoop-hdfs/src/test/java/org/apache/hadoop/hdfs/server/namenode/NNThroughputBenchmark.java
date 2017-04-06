@@ -275,6 +275,7 @@ public class NNThroughputBenchmark {
             LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
             for(nIdx=0; nIdx < curNumThread; nIdx++)
               // DAN: heu ???
+              LOG.info("DAN: start client daemon");
               daemons.get(nIdx).start();
 
           } finally {
