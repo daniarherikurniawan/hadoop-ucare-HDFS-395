@@ -212,6 +212,7 @@ public class NNThroughputBenchmark {
       baseDir = BASE_DIR_NAME + "/" + getOpName();
       LOG.info("DAN : change number replication to 6 ");
       // DAN: when it replicate, it send reports automatically
+      // 1 is not taking effect
       config.setInt(DFSConfigKeys.DFS_REPLICATION_KEY, 1);
 
       /*DAN: replication default 3*/
