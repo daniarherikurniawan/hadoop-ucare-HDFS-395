@@ -2198,13 +2198,13 @@ public class BlockManager {
     for (StatefulBlockInfo b : toUC) { 
       LOG.warn("DAN: enter toUC!!!!!"); 
       // DAN: entered thousands time
-
+ 
       block.addReplicaIfNotPresent(node, block, reportedState);
       // addStoredBlockUnderConstruction(b.storedBlock, node, b.reportedState);
     }
     for (BlockInfo b : toAdd) {
       LOG.warn("DAN: enter toAdd!!!!!");
-      addStoredBlock(b, node, delHintNode, true);
+      // addStoredBlock(b, node, delHintNode, true);
 
       // From toUC like this
       // addStoredBlock(block, node, null, true);
