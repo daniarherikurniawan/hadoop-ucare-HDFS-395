@@ -1444,10 +1444,10 @@ public class FSNamesystem implements Namesystem, FSClusterStats,
       // if (!checkFileProgress(pendingFile, false)) {
       //   throw new NotReplicatedYetException("Not replicated yet:" + src);
       // }
-      // fileLength = pendingFile.computeContentSummary().getLength();
-      // blockSize = pendingFile.getPreferredBlockSize();
-      // clientNode = pendingFile.getClientNode();
-      // replication = (int)pendingFile.getReplication();
+      fileLength = pendingFile.computeContentSummary().getLength();
+      blockSize = pendingFile.getPreferredBlockSize();
+      clientNode = pendingFile.getClientNode();
+      replication = (int)pendingFile.getReplication();
     } finally {
       writeUnlock();
     }
