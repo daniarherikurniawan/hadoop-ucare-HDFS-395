@@ -1085,13 +1085,13 @@ public class NNThroughputBenchmark {
           // DAN: this code below lead to BlockManager and then send block reports incrementally (true)
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
           LOG.info("DAN: sending blockReceived reports (only the original block)");
-          if (i == 1){
+          // if (i == 1){
             nameNode.blockReceived(
                 datanodes[dnIdx].dnRegistration, 
                 loc.getBlock().getBlockPoolId(),
                 new Block[] {loc.getBlock().getLocalBlock()},
                 new String[] {""});
-          }
+          // }
 
         }
       }

@@ -927,6 +927,8 @@ public class BlockManager {
     int scheduledReplicationCount = 0;
     for (int i=0; i<blocksToReplicate.size(); i++) {
       for(Block block : blocksToReplicate.get(i)) {
+        LOG.warn("  blocksToReplicate " + i + "  = "+ blocksToReplicate.get(i));
+
         if (computeReplicationWorkForBlock(block, i)) {
           scheduledReplicationCount++;
         }
@@ -2198,7 +2200,7 @@ public class BlockManager {
 
     for (StatefulBlockInfo b : toUC) { 
       LOG.warn("DAN: enter toUC!!!!!"); 
-      // DAN: entered thousands time
+      // DAN: entered thousands time 
  
       // block.addReplicaIfNotPresent(node, block, reportedState);
       addStoredBlockUnderConstruction(b.storedBlock, node, b.reportedState);
