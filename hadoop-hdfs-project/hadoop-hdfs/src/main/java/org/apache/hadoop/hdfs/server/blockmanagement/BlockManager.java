@@ -1597,6 +1597,7 @@ public class BlockManager {
       LOG.info("DAN:      toUC.add");
       toUC.add(new StatefulBlockInfo(
           (BlockInfoUnderConstruction)storedBlock, reportedState));
+      //DAN: prevent return a value before checking toAdd
       // return storedBlock;
     }
 
@@ -1673,14 +1674,15 @@ public class BlockManager {
     BlockUCState ucState = storedBlock.getBlockUCState();
     // LOG.info("  DAN: In memory blockUCState #3 = " + ucState);
 
-    block.addReplicaIfNotPresent(node, block, reportedState);
+    // block.addReplicaIfNotPresent(node, block, reportedState);
     
     // LOG.info("  DAN: reportedState #3 = " + reportedState);
 
+    // DAN: ini kan kondisi buat toAdd.add() !!! 
     if (reportedState == ReplicaState.FINALIZED && block.findDatanode(node) < 0) {
       // LOG.info("  DAN: block.findDatanode(node) #3 = " + block.findDatanode(node));
       // DAN: this is where the incremental report starts
-      addStoredBlock(block, node, null, true);
+      // addStoredBlock(block, node, null, true);
     }
 
     // LOG.info("  DAN: storedBlock.findDatanode(dn) #3 = " + storedBlock.findDatanode(node));
@@ -2196,11 +2198,17 @@ public class BlockManager {
     for (StatefulBlockInfo b : toUC) { 
       // LOG.warn("DAN: enter toUC!!!!!"); 
       // DAN: entered thousands time
-      addStoredBlockUnderConstruction(b.storedBlock, node, b.reportedState);
+
+      block.addReplicaIfNotPresent(node, block, reportedState);
+      // addStoredBlockUnderConstruction(b.storedBlock, node, b.reportedState);
     }
     for (BlockInfo b : toAdd) {
       LOG.warn("DAN: enter toAdd!!!!!");
       addStoredBlock(b, node, delHintNode, true);
+
+      // From toUC like this
+      // addStoredBlock(block, node, null, true);
+
     }
     for (Block b : toInvalidate) {
       NameNode.stateChangeLog.info("BLOCK* addBlock: block "
