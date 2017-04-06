@@ -1441,13 +1441,13 @@ public class FSNamesystem implements Namesystem, FSClusterStats,
       //
       // If we fail this, bad things happen!
       //
-      if (!checkFileProgress(pendingFile, false)) {
-        throw new NotReplicatedYetException("Not replicated yet:" + src);
-      }
-      fileLength = pendingFile.computeContentSummary().getLength();
-      blockSize = pendingFile.getPreferredBlockSize();
-      clientNode = pendingFile.getClientNode();
-      replication = (int)pendingFile.getReplication();
+      // if (!checkFileProgress(pendingFile, false)) {
+      //   throw new NotReplicatedYetException("Not replicated yet:" + src);
+      // }
+      // fileLength = pendingFile.computeContentSummary().getLength();
+      // blockSize = pendingFile.getPreferredBlockSize();
+      // clientNode = pendingFile.getClientNode();
+      // replication = (int)pendingFile.getReplication();
     } finally {
       writeUnlock();
     }
