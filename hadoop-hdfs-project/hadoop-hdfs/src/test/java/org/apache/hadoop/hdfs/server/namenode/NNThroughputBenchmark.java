@@ -1075,15 +1075,15 @@ public class NNThroughputBenchmark {
     throws IOException {
       ExtendedBlock prevBlock = null;
       for(int jdx = 0; jdx < blocksPerFile; jdx++) {
-        LOG.info("DAN: inside addblock ");
+        // LOG.info("DAN: inside addblock ");
         LocatedBlock loc = nameNode.addBlock(fileName, clientName, prevBlock, null);
         prevBlock = loc.getBlock();
         for(DatanodeInfo dnInfo : loc.getLocations()) {
           int dnIdx = Arrays.binarySearch(datanodes, dnInfo.getName());
-          LOG.info("DAN: Placing block "+dnInfo+" to datanode "+dnIdx);
+          // LOG.info("DAN: Placing block "+dnInfo+" to datanode "+dnIdx);
           // DAN: this code below lead to BlockManager and then send block reports incrementally (true)
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
-          LOG.info("DAN: sending blockReceived reports ");
+          // LOG.info("DAN: sending blockReceived reports ");
           // DAN: this code below should not be executed whatever it takes to prevent incremental reports
           // nameNode.blockReceived(
           //     datanodes[dnIdx].dnRegistration, 

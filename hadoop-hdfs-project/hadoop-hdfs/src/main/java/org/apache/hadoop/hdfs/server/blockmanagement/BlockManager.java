@@ -1357,7 +1357,7 @@ public class BlockManager {
       }
     } finally {
       endTime = Util.now();
-      namesystem.writeUnlock();
+      // namesystem.writeUnlock();
     }
 
     LOG.info("DAN: BLOCK* processReport: from "
