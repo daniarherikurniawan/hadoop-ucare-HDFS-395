@@ -1588,15 +1588,16 @@ public class BlockManager {
     }
 
     if (isBlockUnderConstruction(storedBlock, ucState, reportedState)) {
-      // DAN: start LOG.info("DAN:      toUC.add");
+      // DAN: start 
 
       // LOG.info("DAN:      toAdd.add");
       // toAdd.add(storedBlock);
 
       // DAN: end
+      LOG.info("DAN:      toUC.add");
       toUC.add(new StatefulBlockInfo(
           (BlockInfoUnderConstruction)storedBlock, reportedState));
-      return storedBlock;
+      // return storedBlock;
     }
 
     //add replica if appropriate
@@ -2174,8 +2175,9 @@ public class BlockManager {
     Collection<Block> toInvalidate = new LinkedList<Block>();
     Collection<BlockInfo> toCorrupt = new LinkedList<BlockInfo>();
     Collection<StatefulBlockInfo> toUC = new LinkedList<StatefulBlockInfo>();
-    LOG.info("DAN: before processReportedBlock #1 should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+    // LOG.info("DAN: before processReportedBlock #1 should be 0 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
+    // DAN: this should increase toAdd not toUC
     processReportedBlock(node, block, ReplicaState.FINALIZED,
                               toAdd, toInvalidate, toCorrupt, toUC);
 
@@ -2184,7 +2186,7 @@ public class BlockManager {
     // LOG.info("  DAN: In memory blockUCState #1 = " + ucState);
     // LOG.info("  DAN: storedBlock.findDatanode(dn) #1 = " + storedBlock.findDatanode(node));
 
-    LOG.info("DAN: after processReportedBlock #1 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
+    // LOG.info("DAN: after processReportedBlock #1 should be 1 = " + (toUC.size() + toAdd.size() + toInvalidate.size() + toCorrupt.size()) );
 
     // the block is only in one of the to-do lists
     // if it is in none then data-node already has it
