@@ -1079,8 +1079,9 @@ public class NNThroughputBenchmark {
         for(DatanodeInfo dnInfo : loc.getLocations()) {
           int dnIdx = Arrays.binarySearch(datanodes, dnInfo.getName());
           LOG.info("DAN: Placing block "+dnInfo+" to datanode "+dnIdx);
-          // DAN: slow down the block adding
+          // DAN: this code below lead to BlockManager and then send block reports incrementally (true)
           datanodes[dnIdx].addBlock(loc.getBlock().getLocalBlock());
+          LOG.info("DAN: sending blockReceived reports ");
           nameNode.blockReceived(
               datanodes[dnIdx].dnRegistration, 
               loc.getBlock().getBlockPoolId(),
