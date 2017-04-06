@@ -2228,6 +2228,8 @@ public class BlockManager {
   public void blockReceived(final DatanodeID nodeID, final String poolId,
       final Block block, final String delHint) throws IOException {
     namesystem.writeLock();
+    LOG.warn("DAN: enter blockReceived in BlockManager");
+
     try {
       final DatanodeDescriptor node = datanodeManager.getDatanode(nodeID);
       if (node == null || !node.isAlive) {
