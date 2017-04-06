@@ -231,7 +231,7 @@ public class NNThroughputBenchmark {
       LOG.info("DAN 1 : numThreads "+numThreads);
       daemons = new ArrayList<StatsDaemon>();
       long start = 0;
-      // DAN: single benchmark
+      // DAN: single benchmark START!!
       int curNumThread = numThreads;
 //      int curNumThread = 1;
       try {
@@ -275,6 +275,8 @@ public class NNThroughputBenchmark {
             LOG.info("Starting " + numOpsRequired + " " + getOpName() + "(s).");
             for(nIdx=0; nIdx < curNumThread; nIdx++)
               // DAN: heu ???
+              // DAN: BENCHAMARKING STARTED, it call block manager and should do accumulative block report
+              LOG.info("DAN: DAEMON CLIENT STARTED!!!! "+nIdx);
               daemons.get(nIdx).start();
 
           } finally {
