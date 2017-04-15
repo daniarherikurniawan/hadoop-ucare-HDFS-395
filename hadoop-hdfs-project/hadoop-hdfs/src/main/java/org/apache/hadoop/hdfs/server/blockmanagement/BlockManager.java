@@ -1058,12 +1058,12 @@ public class BlockManager {
           }
         }
 
-        LOG.warn("DAN: liveReplicaNodes.size()                  = "+liveReplicaNodes.size());
-        LOG.warn("DAN: numReplicas.liveReplicas()               = "+numReplicas.liveReplicas());
-        LOG.warn("DAN: block                                    = "+block);
-        LOG.warn("DAN: pendingReplications.getNumReplicas(block)= "+pendingReplications.getNumReplicas(block));
-        LOG.warn("DAN: numEffectiveReplicas                     = "+numEffectiveReplicas);
-        LOG.warn("DAN: requiredReplication                      = "+requiredReplication);
+        // LOG.warn("DAN: liveReplicaNodes.size()                  = "+liveReplicaNodes.size());
+        // LOG.warn("DAN: numReplicas.liveReplicas()               = "+numReplicas.liveReplicas());
+        // LOG.warn("DAN: block                                    = "+block);
+        // LOG.warn("DAN: pendingReplications.getNumReplicas(block)= "+pendingReplications.getNumReplicas(block));
+        // LOG.warn("DAN: numEffectiveReplicas                     = "+numEffectiveReplicas);
+        // LOG.warn("DAN: requiredReplication                      = "+requiredReplication);
 
         if (numReplicas.liveReplicas() < requiredReplication) {
           additionalReplRequired = requiredReplication - numEffectiveReplicas;
