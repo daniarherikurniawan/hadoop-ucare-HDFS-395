@@ -3,6 +3,8 @@
 	change pc name on this file every swap in:
  	vim	/proj/ucare/git/hadoop-ucare/psbin/mini-slaves
 
+script:
+
  	cd /proj/ucare/riza/start_script/
 	./setup-HDFS-395-DAN.sh
 	cd /mnt/extra/hadoop/
@@ -153,3 +155,14 @@ sci
 
 
 generatesInput -> in the last it sent prepare block reports (formBlockReport)
+
+
+
+
+
+if port 9000 got a problem :
+- netstat -tulpn
+- kill -9 39871
+
+check :
+- BlockListAsLongs

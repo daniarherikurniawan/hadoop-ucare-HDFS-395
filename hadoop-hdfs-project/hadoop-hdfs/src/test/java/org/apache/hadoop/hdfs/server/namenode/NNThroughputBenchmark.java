@@ -213,7 +213,7 @@ public class NNThroughputBenchmark {
       LOG.info("DAN : change number replication to 6 ");
       // DAN: when it replicate, it send reports automatically
       // 1 is not taking effect
-      config.setInt(DFSConfigKeys.DFS_REPLICATION_KEY, 1);
+      config.setInt(DFSConfigKeys.DFS_REPLICATION_KEY, 3);
 
       /*DAN: replication default 3*/
       replication = (short) config.getInt(DFSConfigKeys.DFS_REPLICATION_KEY, 3);
