@@ -232,7 +232,7 @@ public class NNThroughputBenchmark {
       daemons = new ArrayList<StatsDaemon>();
       long start = 0;
       // DAN: single benchmark
-      int curNumThread = numThreads;
+      int curNumThread = 0;
 //      int curNumThread = 1;
       try {
 

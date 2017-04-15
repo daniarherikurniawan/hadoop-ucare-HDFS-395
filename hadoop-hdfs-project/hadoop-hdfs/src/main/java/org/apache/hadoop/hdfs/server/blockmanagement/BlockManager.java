@@ -1015,7 +1015,7 @@ public class BlockManager {
     INodeFile fileINode = null;
     int additionalReplRequired;
 
-    LOG.warn("DAN: .chooseTarget is called at BlockManager computeReplicationWorkForBlock");
+    // LOG.warn("DAN: .chooseTarget is called at BlockManager computeReplicationWorkForBlock");
 
     namesystem.writeLock();
     try {
