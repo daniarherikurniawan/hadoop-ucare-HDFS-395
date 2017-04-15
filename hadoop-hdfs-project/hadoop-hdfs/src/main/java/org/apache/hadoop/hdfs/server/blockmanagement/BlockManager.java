@@ -920,8 +920,8 @@ public class BlockManager {
     // Choose the blocks to be replicated
     List<List<Block>> blocksToReplicate =
       chooseUnderReplicatedBlocks(blocksToProcess);
-    LOG.warn("DAN: called computeReplicationWorkForBlock at computeReplicationWork");
-    LOG.warn("DAN: blocksToReplicate.size()   = "+blocksToReplicate.size());
+    // LOG.warn("DAN: called computeReplicationWorkForBlock at computeReplicationWork");
+    // LOG.warn("DAN: blocksToReplicate.size()   = "+blocksToReplicate.size());
 
     // replicate blocks
     int scheduledReplicationCount = 0;
@@ -1087,7 +1087,7 @@ public class BlockManager {
     // It is costly to extract the filename for which chooseTargets is called,
     // so for now we pass in the Inode itself.
 
-    LOG.warn("DAN: containingNodes                          = "+containingNodes);
+    // LOG.warn("DAN: containingNodes                          = "+containingNodes);
 
 
     DatanodeDescriptor targets[] = 
