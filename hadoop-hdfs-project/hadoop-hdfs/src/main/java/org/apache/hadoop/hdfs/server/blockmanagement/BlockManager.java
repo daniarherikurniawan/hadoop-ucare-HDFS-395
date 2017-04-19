@@ -1388,11 +1388,11 @@ public class BlockManager {
     Collection<StatefulBlockInfo> toUC = new LinkedList<StatefulBlockInfo>();
     reportDiff(node, report, toAdd, toRemove, toInvalidate, toCorrupt, toUC);
 
-    LOG.info("Size of toAdd        : "+toAdd.size());
-    LOG.info("Size of toRemove     : "+toRemove.size());
-    LOG.info("Size of toInvalidate : "+toInvalidate.size());
-    LOG.info("Size of toCorrupt    : "+toCorrupt.size());
-    LOG.info("Size of toUC         : "+toUC.size());
+    // LOG.info("Size of toAdd        : "+toAdd.size());
+    // LOG.info("Size of toRemove     : "+toRemove.size());
+    // LOG.info("Size of toInvalidate : "+toInvalidate.size());
+    // LOG.info("Size of toCorrupt    : "+toCorrupt.size());
+    // LOG.info("Size of toUC         : "+toUC.size());
     // Process the blocks on each queue
     for (StatefulBlockInfo b : toUC) { 
       addStoredBlockUnderConstruction(b.storedBlock, node, b.reportedState);
