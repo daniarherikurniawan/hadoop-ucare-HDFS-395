@@ -1,6 +1,6 @@
 ```
-
-	change pc name on this file every swap in:
+	connect ssh with node-0
+	change pc name of node-0 on this file every swap in:
  	vim	/proj/ucare/git/hadoop-ucare/psbin/mini-slaves
 
 script:
